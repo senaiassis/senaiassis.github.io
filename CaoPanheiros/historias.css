@@ -1,0 +1,180 @@
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.historias-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("https://www.shutterstock.com/image-photo/group-pets-posing-together-dog-600nw-2518087139.jpg")
+      center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 130px 20px;
+}
+
+.historias-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.historias-banner p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.historias-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ===== Cards ===== */
+.historia-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px;
+  width: 270px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.historia-card:hover {
+  transform: translateY(-6px);
+}
+
+/* brilho suave no hover */
+.historia-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.8s ease;
+}
+
+.historia-card:hover::before {
+  left: 120%;
+}
+
+.historia-card img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.historia-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.historia-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}

@@ -1,0 +1,167 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* linha laranja animada abaixo do link */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.ativo::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.saude-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)),
+    url('https://classeasaude.com.br/wp-content/uploads/2020/02/shutterstock_1479238910.jpg')
+    center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.saude-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.saude-banner p {
+  font-size: 1.1rem;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.dicas-saude {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ===== Cards ===== */
+.dica-card {
+  background-color: var(--branco);
+  border-radius: 22px;
+  box-shadow: 0 6px 12px var(--sombra);
+  text-align: center;
+  padding: 30px 25px;
+  width: 270px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* brilho diagonal suave */
+.dica-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: all 0.6s ease;
+}
+
+.dica-card:hover::before {
+  left: 130%;
+}
+
+.dica-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dica-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.dica-card p {
+  color: #444;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}

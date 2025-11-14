@@ -1,0 +1,251 @@
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  gap: 50px; /* espaço entre logo e menu */
+  padding: 15px 40px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+.treinamento-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1735419392984-cff19804b394?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8') center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.treinamento-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.treinamento-banner p {
+  font-size: 1.1rem;
+}
+
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.dicas-treinamento {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.dica-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 25px;
+  width: 260px;
+  transition: transform 0.3s;
+}
+
+.dica-card:hover {
+  transform: scale(1.05);
+}
+
+.dica-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.dica-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}
+/* ====== Seção: Desafios com o Pet ====== */
+.desafios-pet {
+  text-align: center;
+  padding: 40px 200px;
+  background-color: #fff;
+}
+
+.desafios-pet h2 {
+  font-size: 28px;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.desafios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.desafio-card {
+  background-color: #f6f6f6;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.desafio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.desafio-card .icone {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.desafio-card p {
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+  max-width: 260px;
+}
+.comunicacao-filhote {
+  background-color: #fff;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.comunicacao-filhote h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comunicacao-filhote p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.lista-comportamentos {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.lista-comportamentos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-comportamentos li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.texto-final {
+  color: #444;
+  line-height: 1.6;
+}
+/* ===== Animação suave de entrada ===== */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subir 0.8s ease forwards;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav a {
+  position: relative;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* linha animada */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* aparece do centro quando passa o mouse */
+nav a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,173 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--rosa);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Banner ===== */
+.higiene-banner {
+  background: url("https://www.shutterstock.com/image-photo/group-various-breeds-dogs-having-600nw-2523429963.jpg")
+    center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 150px 20px;
+}
+
+
+.higiene-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.higiene-banner p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.dicas-higiene {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.dica-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px;
+  width: 260px;
+  transition: all 0.4s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.dica-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, var(--azul), transparent);
+  transition: 0.5s;
+}
+
+.dica-card:hover::before {
+  left: 100%;
+}
+
+.dica-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dica-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.dica-card:hover h3 {
+  color: var(--azul);
+}
+
+.dica-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

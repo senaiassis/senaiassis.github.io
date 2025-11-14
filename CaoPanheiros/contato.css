@@ -1,0 +1,258 @@
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* linha animada no hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--rosa);
+}
+
+nav a.ativo {
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* ======= SEÇÃO ENTRE EM CONTATO (reduzida) ======= */
+.contato-banner {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px; /* reduzido */
+  color: var(--branco);
+  background: 
+    linear-gradient(rgba(7, 59, 76, 0.8), rgba(7, 59, 76, 0.8)),
+    url("banner-contato.jpg") center/cover no-repeat;
+}
+
+.contato-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(94, 177, 191, 0.2), rgba(7, 59, 76, 0.6));
+  z-index: 1;
+}
+
+.contato-banner h2 {
+  font-size: 2.2rem; /* menor */
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+.contato-banner h2::after {
+  content: "";
+  display: block;
+  width: 80px; /* linha menor */
+  height: 3px;
+  background-color: var(--rosa);
+  margin: 8px auto 15px;
+  border-radius: 4px;
+}
+
+.contato-banner p {
+  font-size: 1rem;
+  color: var(--branco);
+  max-width: 550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ======= CONTEÚDO PRINCIPAL ======= */
+main {
+  background: linear-gradient(180deg, #fff7d6 0%, #ffeaa7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px 20px;
+  min-height: 85vh;
+}
+
+/* Centraliza textos genéricos no main */
+main h1,
+main h2,
+main p {
+  text-align: center;
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+main h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+  margin-bottom: 5px;
+}
+
+main p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* ======= FORMULÁRIO ======= */
+.form-contato {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-contato form {
+  background-color: var(--branco);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* elevação suave */
+.form-contato form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.form-contato label {
+  font-weight: 600;
+  color: var(--azul-escuro);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ícones decorativos */
+.form-contato label::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--azul);
+}
+
+.form-contato label[for="nome"]::before {
+  content: "👤";
+}
+
+.form-contato label[for="email"]::before {
+  content: "✉️";
+}
+
+.form-contato label[for="mensagem"]::before {
+  content: "💬";
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 6px rgba(94, 177, 191, 0.5);
+}
+
+/* ======= BOTÃO ======= */
+.form-contato button {
+  padding: 15px;
+  background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
+  color: var(--branco);
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(7, 59, 76, 0.2);
+}
+
+.form-contato button:hover {
+  background: var(--rosa);
+  color: var(--azul-escuro);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 181, 167, 0.4);
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,225 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.sobre-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)),
+    url('https://www.em.com.br/emfoco/wp-content/uploads/2025/04/caes-e-gatos_1744301425104-1024x576.jpg') center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 130px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, var(--bege), transparent);
+}
+
+.sobre-banner h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.sobre-banner p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== Main ===== */
+main {
+  background-color: var(--bege);
+  padding: 80px 20px;
+}
+
+/* Container geral das seções */
+.sobre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px 25px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: var(--azul-escuro);
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.card p,
+.card ul {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li::before {
+  content: "🐾 ";
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* ===== Animação suave de entrada ===== */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subir 0.8s ease forwards;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .sobre-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+nav a {
+  position: relative;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* linha animada */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* aparece do centro quando passa o mouse */
+nav a:hover::after {
+  width: 100%;
+}

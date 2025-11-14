@@ -1,0 +1,119 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  gap: 50px; /* espaço entre logo e menu */
+  padding: 15px 40px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.cuidados-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1617196035685-9b0d2b9ab48b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cuidados-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cuidados-banner p {
+  font-size: 1.1rem;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.dicas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.dica-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 25px;
+  width: 260px;
+  transition: transform 0.3s;
+}
+
+.dica-card:hover {
+  transform: scale(1.05);
+}
+
+.dica-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.dica-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}

@@ -1,0 +1,289 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  gap: 50px; /* espaço entre logo e menu */
+  padding: 15px 40px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://camposantometropolitano.com/wp-content/uploads/2023/05/mascotaslog.png') center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--rosa);
+  color: var(--branco);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--azul);
+}
+
+/* ===== Cards ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--azul);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--rosa);
+}
+
+/* --- Seção de Adestramento --- */
+.adestramento-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.adestramento-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.adestramento-img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.adestramento-texto {
+  max-width: 500px;
+}
+
+.adestramento-texto h2 {
+  color: #3ba776;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.adestramento-texto p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.adestramento-texto .botao {
+  background-color: #3ba776;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.adestramento-texto .botao:hover {
+  background-color: #2f8a5d;
+}
+/* ==== Seção vídeo informativo ==== */
+.video-informativo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.video-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.texto-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto-box h3 {
+  color: rgba(255, 166, 0, 0.681); /* verde suave */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.texto-box h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.texto-box p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn-azul {
+  background-color: #1e73be;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-azul:hover {
+  background-color: #155a94;
+}
+nav a {
+  position: relative;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* linha animada */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* aparece do centro quando passa o mouse */
+nav a:hover::after {
+  width: 100%;
+}

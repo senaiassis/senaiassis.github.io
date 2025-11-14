@@ -1,0 +1,416 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  gap: 50px; /* espaço entre logo e menu */
+  padding: 15px 40px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.produtos-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url('https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTNjVsSlodju8a3SMtx1xabLJyaZ4Fsj49COweIkyZ3SYUbX1t7+DyPNlX84WDhORQBt78zp1TG2bWl/XhQohsYOMBeJnWJkohfYvLaKXQDaCw4=') center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.produtos-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: px;
+}
+
+.produtos-banner p {
+  font-size: 1.1rem;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.produto-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.produto-card:hover {
+  transform: scale(1.05);
+}
+
+.produto-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.produto-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.produto-card p {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.produto-card .preco {
+  display: block;
+  font-weight: bold;
+  color: var(--azul);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--azul);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--rosa);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+}
+/* ===== Categorias com fundo branco ===== */
+.categorias {
+  background-color: var(--bege);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.categoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Banner lateral */
+.banner-animal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--azul-escuro);
+  border-radius: 25px;
+  padding: 30px 40px;
+  width: 420px;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-animal img {
+  height: 180px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}
+
+.banner-animal .texto {
+  position: relative;
+  z-index: 1;
+  margin-left: 220px;
+}
+
+.banner-animal h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.banner-animal .ver-todos {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.banner-animal.cachorro {
+  background-color: var(--rosa);
+}
+
+.banner-animal.gato {
+  background-color: var(--azul);
+}
+
+/* Caixa branca ao redor das bolinhas */
+.itens-box {
+  background-color: var(--branco);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itens {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.itens div {
+  text-align: center;
+  width: 110px;
+}
+
+.itens img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--branco);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.itens p {
+  margin-top: 8px;
+  font-weight: 500;
+  color: var(--azul-escuro);
+}
+/* ===== Favoritos dos bichos ===== */
+.favoritos {
+  background: linear-gradient(to bottom, #f8f8fb, #fdfdfd);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.favoritos h2 {
+  color: var(--azul-escuro);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cards-favoritos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 240px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #3b2b40;
+  min-height: 50px;
+}
+
+.card .preco-antigo {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.card .preco {
+  color: #431e4b;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.desconto {
+  background-color: #ff4fa0;
+  color: #fff;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.assinantes {
+  font-size: 0.9rem;
+  color: #431e4b;
+}
+
+.assinantes span {
+  color: #888;
+}
+
+.desc2 {
+  background-color: #6b4ef5;
+  color: #fff;
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+.tag {
+  background-color: #3b2b40;
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  margin-right: 5px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.card button {
+  width: 100%;
+  background-color: #ff4fa0;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  font-weight: 700;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #ff6bb5;
+}
+/* ===== Animação suave de entrada ===== */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subir 0.8s ease forwards;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes subir {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav a {
+  position: relative;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* linha animada */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* aparece do centro quando passa o mouse */
+nav a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,171 @@
+/* ===== Paleta ===== */
+:root {
+  --azul: #5eb1bf;
+  --azul-escuro: #073b4c;
+  --bege: #fefae0;
+  --rosa: #ffb5a7;
+  --branco: #ffffff;
+  --laranja: #ffb347;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Linha animada sob o link */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--rosa);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.ativo::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--rosa);
+}
+
+/* ===== Banner ===== */
+.atividades-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)),
+              url('https://brincadeiradepet.com.br/wp-content/uploads/2025/08/lovely-dog-grabbing-ball-from-hand-scaled.jpg')
+              center/cover no-repeat;
+  color: var(--branco);
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.atividades-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.atividades-banner p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ===== Main ===== */
+main {
+  padding: 60px 20px;
+  background-color: var(--bege);
+}
+
+.dicas-atividades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ===== Card ===== */
+.dica-card {
+  background-color: var(--branco);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 25px;
+  width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de brilho ao passar o mouse */
+.dica-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 179, 71, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+}
+
+.dica-card:hover::before {
+  left: 130%;
+}
+
+/* Animação e destaque suave */
+.dica-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 179, 71, 0.35);
+}
+
+/* ===== Texto dos Cards ===== */
+.dica-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.dica-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.95rem;
+}
