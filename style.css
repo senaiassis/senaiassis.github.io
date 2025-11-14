@@ -244,3 +244,74 @@
               font-size: 12px;
           }
       }
+
+      /* GitHub Button Draggable */
+      #github-btn {
+          position: fixed;
+          bottom: 24px;
+          right: 24px;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--black);
+          border: 3px solid var(--black);
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          cursor: grab;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          z-index: 999;
+          text-decoration: none;
+          color: #ffffff;
+          user-select: none;
+          -webkit-user-select: none;
+      }
+
+      #github-btn svg {
+          width: 80px;
+          height: 80px;
+          animation: rotateSlow 3s linear infinite;
+      }
+
+      @keyframes rotateSlow {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      #github-btn:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      #github-btn:hover svg {
+          animation: rotateRandomFast 1s linear infinite;
+      }
+
+      @keyframes rotateRandomFast {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      #github-btn.dragging {
+          cursor: grabbing;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      #github-btn.dragging svg {
+          animation: none;
+      }
+
+      @media (max-width: 640px) {
+          #github-btn {
+              width: 45px;
+              height: 45px;
+              bottom: 16px;
+              right: 16px;
+          }
+
+          #github-btn svg {
+              width: 24px;
+              height: 24px;
+          }
+      }
