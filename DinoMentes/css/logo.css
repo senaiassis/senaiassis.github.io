@@ -1,0 +1,93 @@
+    :root{
+      /* ajuste o tamanho da logo aqui */
+      --logo-size: 56px;        /* tamanho padrão (altura/width automático mantendo aspect ratio) */
+      --logo-padding: 12px;     /* espaço entre a logo e as bordas da página */
+      --logo-radius: 8px;       /* arredondamento (0 para quadrado, 50% para circular) */
+      --logo-shadow: 0 6px 18px rgba(12,18,28,0.18);
+      --logo-bg: rgba(255,255,255,0.90); /* fundo opcional para contraste sobre imagens */
+      --touch-hit: 8px;         /* espaço extra clicável para toque */
+    }
+
+    /* container do site (exemplo) */
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      min-height:100vh;
+      background:
+        linear-gradient(180deg,#def 0%, #9ec 50%, #6aa 100%); /* só para demo */
+    }
+
+    /* Header fixo opcional (conteúdo do site abaixo do header) */
+    header.site-header{
+      position:relative;
+      height:64px;
+      display:flex;
+      align-items:center;
+      padding:0 16px;
+      box-sizing:border-box;
+      background:transparent;
+    }
+
+.site-logo {
+  position: fixed;       /* fixa sobre todo o conteúdo */
+  top: 10px;             /* distância do topo */
+  right: 10px;           /* distância da direita */
+  z-index: 1000;         /* fica acima do conteúdo */
+  display: inline-block;
+  border-radius: var(--logo-radius);
+  background: var(--logo-bg);
+  padding: calc(var(--touch-hit) / 2);
+  box-shadow: var(--logo-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.12s ease;
+  will-change: transform, opacity;
+  margin: 0;             /* remove margens que empurram */
+  width: 100px;
+}
+
+
+    /* link clicável que envolve a imagem */
+    .site-logo a{
+      display:inline-block;
+      line-height:0; /* remove gap */
+      border-radius:calc(var(--logo-radius) - 2px);
+      overflow:hidden;
+      text-decoration:none;
+      outline: none;
+    }
+
+    /* imagem da logo */
+    .site-logo img{
+      display:block;
+      height:var(--logo-size);      /* controla o tamanho final */
+      width:auto;                   /* mantém proporção */
+      max-width: calc(100vw - 32px);
+      user-select:none;
+      pointer-events:auto;
+      border-radius:inherit;
+      box-shadow:none;
+    }
+
+    /* efeito hover / foco */
+    .site-logo:focus-within,
+    .site-logo:hover{
+      transform:translateY(-4px) scale(1.02);
+      box-shadow: 0 10px 26px rgba(12,18,28,0.24);
+    }
+
+    /* foco visível acessível */
+    .site-logo a:focus{
+      box-shadow: 0 0 0 4px rgba(60,130,255,0.18);
+      outline: none;
+    }
+
+    /* reduz movimento para usuários que preferem menos movimento */
+    @media (prefers-reduced-motion: reduce){
+      .site-logo,
+      .site-logo * { transition: none !important; transform: none !important; }
+    }
+
+    /* adapta em telas pequenas: logo levemente menor e padding reduzido */
+    @media (max-width:420px){
+      :root{ --logo-size: 44px; --logo-padding:8px; }
+      .site-logo { padding:6px; }
+    }
