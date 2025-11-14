@@ -212,3 +212,35 @@
         .banner-inner h1{ font-size:20px; }
         .subtitle{ font-size:13px; }
       }
+
+      /* Footer coerente com o estilo dos cards */
+      footer {
+          max-width: 1100px;
+          margin: 40px auto 24px;
+          padding: 14px 18px;
+          background: #ffffff;
+          border: 3px solid var(--black);
+          box-shadow: 12px 12px 0 var(--black);
+          border-radius: 4px;
+          text-align: center;
+      }
+
+      footer p {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--black);
+          font-family: 'Montserrat', sans-serif;
+      }
+
+      /* Ajustes responsivos */
+      @media (max-width: 640px) {
+          footer {
+              margin: 24px auto;
+              padding: 12px 16px;
+          }
+          
+          footer p {
+              font-size: 12px;
+          }
+      }
