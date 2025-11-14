@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astronomia Fácil | Ciência Fácil</title>
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="../index.css" /> 
+    
+    <link rel="stylesheet" href="paginas.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a> <!-- Dps nois inventa -->
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+   <main class="layout-principal-conteudo">
+        
+        <section class="pagina-titulo">
+            <h1>Astronomia</h1>
+            <p>O fascínio pelo cosmos: planetas, estrelas, galáxias e a busca por vida fora da Terra.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>Tópico em Destaque: Cosmologia Básica</h3>
+            
+            <article>
+                <h4>O Big Bang e o Futuro do Universo</h4>
+                <p>Teoria da origem do Universo. Entenda a expansão, a Radiação Cósmica de Fundo e o papel da Matéria e Energia Escura.</p>
+                <a href="bigbang.html">Ver Lição Completa...</a>
+            </article>
+            
+            <article>
+                <h4>O Ciclo de Vida das Estrelas</h4>
+                <p>Como nascem, vivem e morrem as estrelas, resultando em gigantes vermelhas, anãs brancas, estrelas de nêutrons e buracos negros.</p>
+                <a href="estrelas.html">Ver Lição Completa...</a>
+            </article>
+        </section>
+        
+        <section class="recomendacoes-externas">
+            <h3>Canais de Divulgação Astronômica</h3>
+            <div class="canal-item">
+                <h4>Canal Exemplo 1: Mensageiro Sideral</h4>
+                <p>Conteúdo de alta qualidade visual sobre telescópios, missões espaciais e astrofotografia.</p>
+                <a href="https://www.youtube.com/@MensageiroSideral" target="_blank">Acessar Canal (Link)</a>
+            </div>
+        </section>
+        
+       <section class="recursos-relacionados">
+    <h3>Recursos Internos de Astronomia</h3>
+
+    <!-- Lista de Constelações Disponíveis -->
+    <div class="lista-constelacoes">
+        <h4>✨ Constelações Disponíveis</h4>
+        <p>Você pode localizar as seguintes constelações no mapa estelar interativo:</p>
+        <ul>
+            <li>Órion</li>
+            <li>Ursa Maior</li>
+            <li>Escorpião</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Mapa Estelar Interativo -->
+    <div class="mapa-estelar">
+        <h4>🗺️ Mapa Estelar Interativo</h4>
+        <p>Digite o nome de uma das constelações acima para receber uma breve explicação sobre:</p>
+        <input type="text" id="constelacaoInput" placeholder="Ex: Órion">
+        <button onclick="mostrarConstelacao()">Explicar</button>
+        <p id="constelacaoResultado"></p>
+    </div>
+
+    <hr>
+
+    <!-- Glossário de Astronomia -->
+    <div class="glossario-astronomia">
+        <h4>📚 Glossário</h4>
+        <p>Escolha um termo para ver a definição:</p>
+        <select id="termoSelect" onchange="mostrarDefinicao()">
+            <option value="">Selecione um termo</option>
+            <option value="estrela">Estrela</option>
+            <option value="galaxia">Galáxia</option>
+            <option value="buracoNegro">Buraco Negro</option>
+            <option value="planeta">Planeta</option>
+        </select>
+        <p id="definicao"></p>
+    </div>
+</section>
+
+<script>
+// ====================== Mapa Estelar ======================
+const constelacoes = {
+    "Órion": "Órion é uma das constelações mais visíveis e conhecidas, fácil de identificar pelas três estrelas que formam o Cinturão de Órion.",
+    "Ursa Maior": "Ursa Maior contém o famoso asterismo do 'Grande Carro'. É visível durante a maior parte do ano no hemisfério norte.",
+    "Escorpião": "Escorpião é uma constelação do zodíaco, reconhecível pela estrela vermelha Antares."
+};
+
+function mostrarConstelacao() {
+    const input = document.getElementById("constelacaoInput").value.trim();
+    const resultado = document.getElementById("constelacaoResultado");
+    
+    if (input in constelacoes) {
+        resultado.innerHTML = `<strong>${input}:</strong> ${constelacoes[input]}`;
+    } else if (input === "") {
+        resultado.innerHTML = "Digite uma constelação válida.";
+    } else {
+        resultado.innerHTML = "Constelação não encontrada no mapa interativo.";
+    }
+}
+
+// ====================== Glossário ======================
+const glossario = {
+    estrela: "Corpo celeste que emite luz própria, como o Sol.",
+    galaxia: "Conjunto de estrelas, planetas e matéria cósmica agrupados por gravidade.",
+    buracoNegro: "Região do espaço com gravidade tão intensa que nada escapa, nem a luz.",
+    planeta: "Corpo celeste que orbita uma estrela e não produz luz própria."
+};
+
+function mostrarDefinicao() {
+    const termo = document.getElementById("termoSelect").value;
+    const definicao = document.getElementById("definicao");
+
+    if (termo in glossario) {
+        definicao.innerHTML = `<strong>${termo}:</strong> ${glossario[termo]}`;
+    } else {
+        definicao.innerHTML = "";
+    }
+}
+</script>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forças — A Lei da Ação e Reação | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <style>
+        /* Pequenos estilos locais para a demonstração interativa (mantêm as cores do site) */
+        .demo-forca {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .bloco-obj {
+            width: 180px;
+            height: 100px;
+            background: #fff;
+            border-left: 6px solid var(--cor2);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+        }
+
+        .obj-titulo {
+            color: var(--marrom);
+            font-weight: 700;
+        }
+
+        .seta {
+            position: absolute;
+            height: 6px;
+            background: var(--marrom);
+            top: 30%;
+            transition: width 0.25s ease, left 0.25s ease, right 0.25s ease;
+            transform-origin: left center;
+            border-radius: 4px;
+        }
+
+        .seta.reacao {
+            background: var(--cor2);
+        }
+
+        .label-forca {
+            position: absolute;
+            top: 65%;
+            font-weight: 700;
+            color: var(--marrom);
+            font-size: 0.95rem;
+        }
+
+        .controles {
+            text-align: center;
+            margin-top: 10px;
+            background: #fff;
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 5px solid var(--cor2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            width: 120px;
+            border-radius: 6px;
+            border: 1px solid rgba(0,0,0,0.08);
+            margin-right: 10px;
+        }
+
+        .nota {
+            margin-top: 10px;
+            color: var(--marrom);
+            font-style: italic;
+        }
+
+        @media (max-width:700px){
+            .bloco-obj { width:140px; height:90px; }
+            .seta { top: 35%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Forças — A Lei da Ação e Reação Explicada</h1>
+            <p>Um mergulho nas Leis de Newton de forma prática, com exemplos do dia a dia.</p>
+        </section>
+
+        <!-- 📘 Tópico: Conceito -->
+        <section class="conteudo-topico">
+            <h3>📘 O que é a 3ª Lei de Newton?</h3>
+            <article>
+                <h4>Enunciado</h4>
+                <p>
+                    A <strong>Terceira Lei de Newton</strong> afirma que <em>para toda força de ação existe uma força de reação de mesma intensidade, mesma linha de ação e sentido oposto</em>.
+                    Em símbolos: <strong>F<sub>ação</sub> = −F<sub>reação</sub></strong>.
+                </p>
+                <p>
+                    Importantíssimo: ação e reação atuam em <strong>corpos diferentes</strong>, nunca no mesmo corpo — por isso não se cancelam entre si.
+                </p>
+            </article>
+
+            <article>
+                <h4>Como entender na prática?</h4>
+                <ul>
+                    <li>Ao empurrar uma parede com a mão, sua mão exerce força sobre a parede; a parede exerce a mesma força na sua mão (por isso sua mão sente resistência).</li>
+                    <li>Quando um foguete expulsa gases para baixo, os gases empurram o foguete para cima — essa força de reação é o que gera o impulso (propulsão).</li>
+                    <li>Ao andar, o pé empurra o chão para trás; o chão empurra o pé para frente — é essa reação que move você.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 🧪 Demonstração Interativa -->
+        <section class="conteudo-topico">
+            <h3>🧪 Demonstração Interativa: Força de Ação e Reação</h3>
+
+            <article>
+                <p>Insira uma força aplicada (em N). Abaixo você verá duas caixas representando dois corpos — a seta sobre cada caixa mostra a magnitude e sentido das forças (ação e reação).</p>
+
+                <div class="controles">
+                    <label for="forcaInput">Força aplicada (N): </label>
+                    <input id="forcaInput" type="number" value="10" step="1" min="0">
+                    <button onclick="atualizarDemo()">Aplicar Força</button>
+
+                    <div class="nota">Nota: este é um modelo didático — as setas escalam visualmente para ilustrar a igualdade de magnitudes (mesma medida), porém a reação atua no outro corpo.</div>
+                </div>
+
+                <div class="demo-forca" aria-hidden="false" style="margin-top:16px;">
+                    <div class="bloco-obj" id="objA">
+                        <div class="seta acao" id="setaA" style="left: -60px; width: 0;"></div>
+                        <div class="seta reacao" id="setaARe" style="right: -60px; width: 0;"></div>
+                        <div class="obj-titulo">Corpo A</div>
+                        <div class="label-forca" id="labelA"></div>
+                    </div>
+
+                    <div class="bloco-obj" id="objB">
+                        <div class="seta acao" id="setaB" style="left: -60px; width: 0;"></div>
+                        <div class="seta reacao" id="setaBRe" style="right: -60px; width: 0;"></div>
+                        <div class="obj-titulo">Corpo B</div>
+                        <div class="label-forca" id="labelB"></div>
+                    </div>
+                </div>
+
+                <p style="text-align:center; margin-top:12px;"><strong>Interpretação:</strong> se A empurra B para a direita com 10 N (ação), B empurra A para a esquerda com 10 N (reação).</p>
+            </article>
+        </section>
+
+        <!-- ✅ Exemplos do dia a dia -->
+        <section class="conteudo-topico">
+            <h3>✅ Exemplos do cotidiano</h3>
+            <article>
+                <h4>Empurrar carrinho</h4>
+                <p>Ao empurrar um carrinho, sua mão aplica força sobre ele; o carrinho aplica força igual/oposta sobre sua mão. Se houver atrito suficiente ou rodas, o carrinho se move.</p>
+            </article>
+
+            <article>
+                <h4>Pulso em uma prancha</h4>
+                <p>Se você empurra uma prancha apoiada no chão para frente, o chão fornece uma força de reação que pode levantar a prancha ou movê-la dependendo das forças envolvidas.</p>
+            </article>
+        </section>
+
+        <!-- 📚 Recursos e leitura -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+            <ul>
+                <li>Experimento sugerido: empurre dois carrinhos em contato e observe as forças (use sensores, se possível).</li>
+                <li>Exercícios: calcule as forças de reação em situações com diferentes massas e acelerações.</li>
+            </ul>
+        </section>
+
+        <!-- 📺 Canais recomendados -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Física</h3>
+            <div class="canal-item">
+                <h4>Física Total</h4>
+                <p>Vídeos curtos e práticos sobre leis de Newton e problemas de cinemática.</p>
+                <a href="https://www.youtube.com/@FisicaTotal" target="_blank">Acessar Canal</a>
+            </div>
+            <div class="canal-item">
+                <h4>Manual do Mundo</h4>
+                <p>Demonstrações práticas e experimentos que ajudam a visualizar forças e reações no dia a dia.</p>
+                <a href="https://www.youtube.com/@manualdomundo" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script interativo -->
+    <script>
+        // Faz a escala visual das setas com base na força fornecida
+        function atualizarDemo() {
+            const f = parseFloat(document.getElementById('forcaInput').value);
+            if (isNaN(f) || f < 0) return;
+
+            // escala visual: mapeia força (N) para pixels de seta (até um máximo)
+            const maxForce = 100; // N para escala máxima
+            const maxPx = 140; // largura máxima da seta em px
+            const scale = Math.min(f / maxForce, 1); // 0..1
+            const px = Math.round(scale * maxPx) + 6; // +6 para garantir visibilidade mínima
+
+            // Corpo A empurra B para a direita (ação)
+            const setaA = document.getElementById('setaA');
+            setaA.style.left = '-20px';
+            setaA.style.width = px + 'px';
+            // reação sobre A (vinda de B) - apontando para a esquerda (usar setaARe direita)
+            const setaARe = document.getElementById('setaARe');
+            setaARe.style.right = '-20px';
+            setaARe.style.width = px + 'px';
+
+            // Corpo B: mostra a força aplicada por A (setaB pointing left) e reação (to right)
+            const setaB = document.getElementById('setaB');
+            setaB.style.left = '-20px';
+            setaB.style.width = px + 'px';
+            const setaBRe = document.getElementById('setaBRe');
+            setaBRe.style.right = '-20px';
+            setaBRe.style.width = px + 'px';
+
+            // Labels de texto (mostra igualdade de magnitudes)
+            const labelA = document.getElementById('labelA');
+            const labelB = document.getElementById('labelB');
+            labelA.innerText = `${f} N (reação de B sobre A)`;
+            labelB.innerText = `${f} N (ação de A sobre B)`;
+        }
+
+        // Atualiza ao carregar com o valor padrão
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarDemo();
+        });
+    </script>
+
+</body>
+</html>

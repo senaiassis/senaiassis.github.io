@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Ciência Fácil</title>
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Contato</h1>
+            <p>Fale com a equipe do Ciência Fácil. Estamos prontos para ouvir sugestões, dúvidas ou propostas de colaboração.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>📬 Formulário de Contato</h3>
+            <form id="form-contato">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required><br><br>
+
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="mensagem-sucesso" style="margin-top:10px; font-weight:bold; color: var(--cor5);"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Simulação de envio de formulário
+        const form = document.getElementById("form-contato");
+        const msgSucesso = document.getElementById("mensagem-sucesso");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault(); // impede envio real
+            const nome = document.getElementById("nome").value;
+            msgSucesso.textContent = `Obrigado, ${nome}! Sua mensagem foi recebida. Entraremos em contato em breve.`;
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

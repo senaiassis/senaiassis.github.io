@@ -1,0 +1,168 @@
+:root{
+    --marrom: #42282c;
+    --cor2: #6ca19e;
+    --cor3: #84abaa;
+    --cor4: #ded1b6; 
+    --cor5: #6d997a;
+}
+
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arial', 'sans-serif'
+}
+
+/* ===== Menu Superior (Header com Navegação Horizontal de Duas Linhas) ===== */
+header {
+    background-color: var(--cor5);
+    padding: 15px 0;
+}
+
+.container-menu {
+    max-width: 1100px;
+    margin: auto;
+    /* Flexbox para alinhar Logo e Nav */
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhado ao topo */
+    color: white;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    /* Dá um pequeno espaço para não ficar grudado no menu */
+    padding-top: 2px; 
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ESTILIZAÇÃO CHAVE PARA O MENU EM DUAS LINHAS */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap; /* PERMITE QUE OS LINKS QUEBREM PARA A PRÓXIMA LINHA */
+    max-width: 80%; /* Limita a largura do menu para forçar o wrap */
+    gap: 5px 10px; /* Espaçamento entre os links, tanto vertical quanto horizontal */
+    padding-top: 0; /* Remove padding padrão se houver */
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+    /* Remove margin-left, pois o 'gap' cuida do espaçamento */
+}
+
+.menu-links a:hover {
+    color: var(--cor4);
+}
+
+/* Estilo para destacar o fundo dos links (Para simular o rosa/laranja da imagem) */
+.menu-links a {
+    /* Isso força o fundo do link a ser visível, mas o hover controlará a cor real */
+    background-color: rgba(255, 255, 255, 0.1); /* Um toque sutil de branco para simular o contorno */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.menu-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente mais escuro no hover */
+    color: var(--cor4);
+}
+
+
+/* ===== Conteúdo Principal (MAIN) ===== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Estilos do Conteúdo (Hero Banner, Destaques, Artigos) - Mantidos */
+.hero-banner {
+    background-color: var(--cor3);
+    color: var(--marrom);
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.hero-banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button-cta {
+    display: inline-block;
+    background-color: var(--marrom);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.button-cta:hover {
+    background-color: var(--marrom);
+    opacity: 0.9;
+}
+
+.destaques h3 {
+    border-bottom: 3px solid var(--cor5);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: var(--marrom);
+}
+
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--cor2);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article h4 {
+    color: var(--cor5);
+    margin-bottom: 8px;
+}
+
+article a {
+    color: var(--cor2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Rodapé (Footer) ===== */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}

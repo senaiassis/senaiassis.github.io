@@ -1,0 +1,259 @@
+:root{
+    --marrom: #42282c;
+    --cor2: #6ca19e;
+    --cor3: #84abaa;
+    --cor4: #ded1b6; 
+    --cor5: #6d997a;
+}
+
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* ===== Página inteira ===== */
+body {
+    background-color: var(--cor4);
+    color: var(--marrom);
+    line-height: 1.6;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background-color: var(--cor5);
+    padding: 18px 0;
+}
+
+.container-menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo a {
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+/* Menu */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.03);
+    transition: background 0.2s, color 0.2s;
+    font-size: 0.95rem;
+}
+
+.menu-links a:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--cor4);
+}
+
+/* ===== Main container ===== */
+.layout-principal-conteudo {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* ===== Página título ===== */
+.pagina-titulo {
+    background-color: var(--cor2);
+    color: white;
+    padding: 36px 20px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.pagina-titulo h1 {
+    font-size: 2.2rem;
+}
+
+.pagina-titulo p {
+    margin-top: 8px;
+    opacity: 0.95;
+}
+
+/* ===== Conteúdo por tópicos ===== */
+.conteudo-topico {
+    margin-bottom: 28px;
+}
+
+.conteudo-topico h3 {
+    color: var(--marrom);
+    margin-bottom: 16px;
+    padding-left: 10px;
+    border-left: 5px solid var(--cor5);
+    font-size: 1.1rem;
+}
+
+/* Card de artigo */
+article {
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-left: 5px solid var(--cor2);
+}
+
+article h4 {
+    color: var(--cor5);
+    margin-bottom: 10px;
+}
+
+article p {
+    color: var(--marrom);
+    margin-bottom: 10px;
+}
+
+/* Listas */
+ul {
+    margin-left: 18px;
+    margin-top: 8px;
+}
+
+/* ===== Simulador (form) ===== */
+.form-genetica {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 12px;
+    background: var(--cor3);
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.form-genetica label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: var(--marrom);
+    font-size: 0.95rem;
+}
+
+.form-genetica input[type="text"] {
+    padding: 8px 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.08);
+    width: 90px;
+    text-align: center;
+}
+
+/* Botões */
+button {
+    background-color: var(--cor5);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.18s, transform 0.08s;
+}
+
+button:hover { background-color: var(--cor2); }
+button:active { transform: translateY(1px); }
+
+/* Resultado do simulador */
+#resultado {
+    margin-top: 14px;
+    background: #fff;
+    padding: 14px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    color: var(--marrom);
+}
+
+/* ===== Recursos relacionados ===== */
+.recursos-relacionados {
+    margin-top: 24px;
+}
+
+.recursos-relacionados h3 {
+    color: var(--marrom);
+    margin-bottom: 12px;
+}
+
+/* Itens da lista de recursos */
+.recursos-relacionados ul {
+    list-style: disc;
+    padding-left: 22px;
+}
+
+.recursos-relacionados li {
+    margin-bottom: 8px;
+    color: var(--marrom);
+}
+
+/* ===== Recomendações externas ===== */
+.recomendacoes-externas {
+    margin-top: 24px;
+}
+
+.canal-item {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 5px solid var(--cor2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.canal-item h4 {
+    color: var(--cor5);
+    margin-bottom: 8px;
+}
+
+.canal-item p {
+    color: var(--marrom);
+    margin-bottom: 8px;
+}
+
+.canal-item a {
+    color: var(--cor2);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.canal-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 14px 0;
+    margin-top: 28px;
+}
+
+/* ===== Responsividade simples ===== */
+@media (max-width: 700px) {
+    .form-genetica { justify-content: center; }
+    .menu-links { gap: 6px 8px; font-size: 0.9rem; }
+    .pagina-titulo h1 { font-size: 1.6rem; }
+}

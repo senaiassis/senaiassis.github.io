@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equações do 2º Grau | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Equações do 2º Grau</h1>
+            <p>Entenda como resolver, interpretar e aplicar as equações quadráticas no seu dia a dia.</p>
+        </section>
+
+        <!-- 📘 Tópico 1 -->
+        <section class="conteudo-topico">
+            <h3>📘 Conceito Fundamental</h3>
+            <article>
+                <h4>O que é uma Equação do 2º Grau?</h4>
+                <p>Uma <strong>equação do 2º grau</strong> é uma expressão matemática que contém uma incógnita elevada ao quadrado, escrita na forma geral: <strong>ax² + bx + c = 0</strong>.</p>
+                <p>O número <strong>a</strong> deve ser diferente de zero, pois é ele que caracteriza o grau da equação. Os valores de <strong>a</strong>, <strong>b</strong> e <strong>c</strong> são chamados de <em>coeficientes</em> e determinam o formato da parábola no gráfico.</p>
+            </article>
+
+            <article>
+                <h4>🧠 Interpretação Gráfica</h4>
+                <p>O gráfico de uma equação do 2º grau é uma <strong>parábola</strong>. Quando o coeficiente <strong>a</strong> é positivo, ela se abre para cima; quando é negativo, se abre para baixo.</p>
+                <p>O ponto mais alto ou mais baixo da parábola é chamado de <strong>vértice</strong>, e sua posição depende dos valores de <strong>a</strong>, <strong>b</strong> e <strong>c</strong>.</p>
+            </article>
+        </section>
+
+        <!-- 🧮 Tópico 2 -->
+        <section class="conteudo-topico">
+            <h3>🧮 Resolução com a Fórmula de Bhaskara</h3>
+
+            <article>
+                <h4>1️⃣ Calcular o Δ (Delta)</h4>
+                <p>O discriminante, representado por Δ, é calculado pela fórmula: <strong>Δ = b² - 4ac</strong>.</p>
+                <p>Ele determina o número de soluções reais da equação.</p>
+            </article>
+
+            <article>
+                <h4>2️⃣ Aplicar a Fórmula de Bhaskara</h4>
+                <p>Usamos a fórmula: <strong>x = (-b ± √Δ) / 2a</strong>.</p>
+                <p>Substituindo os valores, encontramos as raízes da equação, ou seja, os valores de <strong>x</strong> que tornam a expressão verdadeira.</p>
+            </article>
+
+            <article>
+                <h4>3️⃣ Interpretando o Δ</h4>
+                <ul>
+                    <li>Se Δ > 0 → duas soluções reais e diferentes</li>
+                    <li>Se Δ = 0 → uma solução real (raiz dupla)</li>
+                    <li>Se Δ < 0 → não há solução real (raízes complexas)</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 💻 Calculadora -->
+        <section class="conteudo-topico">
+            <h3>💻 Calculadora de Bhaskara</h3>
+            <div class="calculadora">
+                <p>Insira os valores de <strong>a</strong>, <strong>b</strong> e <strong>c</strong>:</p>
+                <input type="number" id="a" placeholder="a">
+                <input type="number" id="b" placeholder="b">
+                <input type="number" id="c" placeholder="c">
+                <button onclick="calcularBhaskara()">Calcular</button>
+                <p id="resultado"></p>
+            </div>
+        </section>
+
+        <!-- 📚 Exercícios -->
+        <section class="conteudo-topico exercicios">
+            <h3>📚 Exercícios Resolvidos</h3>
+            <p><strong>Exemplo 1:</strong> x² - 5x + 6 = 0 → Δ = 1 → x₁ = 2, x₂ = 3.</p>
+            <p><strong>Exemplo 2:</strong> x² + 4x + 4 = 0 → Δ = 0 → x = -2.</p>
+            <p><strong>Exemplo 3:</strong> x² + x + 1 = 0 → Δ < 0 → sem raízes reais.</p>
+        </section>
+
+        <!-- 📈 Gráfico Interativo -->
+        <section class="conteudo-topico grafico-container">
+            <h3>📈 Visualize a Parábola</h3>
+            <canvas id="grafico" width="500" height="300"></canvas>
+        </section>
+
+        <!-- 🔗 Recursos -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+            <ul>
+                <li><strong>Calculadora de Bhaskara:</strong> Resolva suas equações rapidamente.</li>
+                <li><strong>Exercícios Resolvidos:</strong> Veja exemplos com Δ positivo, nulo e negativo.</li>
+                <li><strong>Gráficos Interativos:</strong> Observe como o valor de “a” altera a forma da parábola.</li>
+            </ul>
+        </section>
+
+        <!-- 📺 Canais -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Matemática</h3>
+
+            <div class="canal-item">
+                <h4>Professor Ferretto</h4>
+                <p>Aulas diretas e bem explicadas sobre equações do 2º grau e Bhaskara.</p>
+                <a href="https://www.youtube.com/@Ferretto" target="_blank">Acessar Canal</a>
+            </div>
+
+            <div class="canal-item">
+                <h4>Matemática Rio</h4>
+                <p>Explicações descontraídas e passo a passo sobre equações quadráticas e gráficos.</p>
+                <a href="https://www.youtube.com/@MatematicaRio" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- 📜 Script -->
+    <script>
+        // 🧮 Calculadora de Bhaskara
+        function calcularBhaskara() {
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const c = parseFloat(document.getElementById("c").value);
+            const resultado = document.getElementById("resultado");
+
+            if (!a) {
+                resultado.innerHTML = "⚠️ O valor de 'a' não pode ser 0.";
+                return;
+            }
+
+            const delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                resultado.innerHTML = "Δ = " + delta + " → Não existem raízes reais.";
+                return;
+            }
+
+            const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+            resultado.innerHTML = `Δ = ${delta}<br> x₁ = ${x1.toFixed(2)}<br> x₂ = ${x2.toFixed(2)}`;
+            desenharGrafico(a, b, c);
+        }
+
+        // 📈 Gráfico simples da parábola
+        function desenharGrafico(a, b, c) {
+            const canvas = document.getElementById("grafico");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+
+            for (let x = -10; x <= 10; x += 0.1) {
+                const y = a * x * x + b * x + c;
+                const px = (x + 10) * 25;
+                const py = canvas.height / 2 - y * 10;
+                ctx.lineTo(px, py);
+            }
+
+            ctx.strokeStyle = "#42282c";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+    </script>
+
+</body>
+</html>

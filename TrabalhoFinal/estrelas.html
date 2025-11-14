@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ciclo de Vida das Estrelas | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>O Ciclo de Vida das Estrelas</h1>
+            <p>Como nascem, vivem e morrem as estrelas, resultando em gigantes vermelhas, anãs brancas, estrelas de nêutrons e buracos negros.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🌟 Formação das Estrelas</h3>
+            <article>
+                <p>
+                    As estrelas nascem dentro de <strong>nebulosas</strong> — grandes nuvens de gás e poeira espalhadas pelo espaço. 
+                    A força da gravidade faz com que essas partículas se juntem, formando uma região cada vez mais densa e quente. 
+                    Quando a temperatura do núcleo atinge cerca de <strong>10 milhões de graus Celsius</strong>, inicia-se o processo de <strong>fusão nuclear</strong>: o nascimento de uma nova estrela.
+                </p>
+            </article>
+
+            <article>
+                <h4>💥 O Papel da Fusão Nuclear</h4>
+                <p>
+                    A fusão nuclear transforma <strong>hidrogênio em hélio</strong>, liberando uma quantidade imensa de energia. 
+                    Essa energia equilibra a força da gravidade, impedindo que a estrela colapse. 
+                    Essa é a fase mais longa e estável da vida de uma estrela, chamada de <strong>sequência principal</strong>.
+                </p>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🕰️ A Evolução das Estrelas</h3>
+            <article>
+                <h4>⭐ Estrelas de Baixa Massa</h4>
+                <p>
+                    Estrelas como o <strong>Sol</strong> consomem seu combustível lentamente. 
+                    Quando o hidrogênio se esgota, elas se expandem e se tornam <strong>gigantes vermelhas</strong>. 
+                    Depois, perdem suas camadas externas e deixam para trás um núcleo denso chamado <strong>anã branca</strong>.
+                </p>
+            </article>
+
+            <article>
+                <h4>🌠 Estrelas de Alta Massa</h4>
+                <p>
+                    As estrelas muito massivas vivem menos tempo. 
+                    Quando o combustível acaba, ocorre uma <strong>supernova</strong> — uma explosão colossal que espalha elementos pesados pelo espaço. 
+                    O que resta pode ser uma <strong>estrela de nêutrons</strong> ou, se a massa for enorme, um <strong>buraco negro</strong>.
+                </p>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🔭 Explore o Ciclo das Estrelas</h3>
+            <p>Use o botão abaixo para visualizar as principais fases do ciclo estelar.</p>
+            <button id="mostrarCiclo">Mostrar Ciclo Estelar</button>
+            <ul id="listaCiclo" style="display: none;">
+                <li>Nebulosa → Berçário estelar</li>
+                <li>Protostar → Início da fusão nuclear</li>
+                <li>Sequência Principal → Estabilidade e brilho constante</li>
+                <li>Gigante Vermelha ou Supergigante → Expansão e envelhecimento</li>
+                <li>Supernova ou Nebulosa Planetária → Fim violento ou tranquilo</li>
+                <li>Anã Branca, Estrela de Nêutrons ou Buraco Negro → Destino final</li>
+            </ul>
+        </section>
+
+        
+
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Astronomia</h3>
+            <div class="canal-item">
+                <h4>Mensageiro Sideral</h4>
+                <p>Conteúdo de alta qualidade visual sobre telescópios, missões espaciais e astrofotografia.</p>
+                <a href="https://www.youtube.com/@MensageiroSideral" target="_blank">Acessar Canal</a>
+            </div>
+            <div class="canal-item">
+                <h4>Canal Space Today</h4>
+                <p>Notícias, curiosidades e explicações sobre o universo de forma detalhada e acessível.</p>
+                <a href="https://www.youtube.com/@SpaceToday" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- 🎇 SCRIPT INTERATIVO -->
+    <script>
+        document.getElementById("mostrarCiclo").addEventListener("click", function() {
+            const lista = document.getElementById("listaCiclo");
+            if (lista.style.display === "none") {
+                lista.style.display = "block";
+                this.innerText = "Ocultar Ciclo Estelar";
+            } else {
+                lista.style.display = "none";
+                this.innerText = "Mostrar Ciclo Estelar";
+            }
+        });
+    </script>
+
+</body>
+</html>

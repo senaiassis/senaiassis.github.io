@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning e Redes Neurais | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <style>
+        /* Estilos adicionais da parte interativa */
+        .aprendizado {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--cor2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .botao {
+            background: var(--cor2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .botao:hover {
+            background: var(--cor5);
+        }
+
+        .neuronio {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            background: var(--cor3);
+            line-height: 40px;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .neuronio.ativo {
+            background: var(--cor2);
+            transform: scale(1.2);
+        }
+
+        .resultado-aprendizado {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--marrom);
+        }
+
+        @media (max-width:700px){
+            .neuronio { width: 30px; height: 30px; line-height: 30px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+        <section class="pagina-titulo">
+            <h1>Machine Learning e Redes Neurais</h1>
+            <p>Entenda como as máquinas "aprendem" e como a estrutura do cérebro inspira as redes neurais que resolvem problemas complexos.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🤖 O que é Machine Learning?</h3>
+            <article>
+                <p>
+                    <strong>Machine Learning</strong> (Aprendizado de Máquina) é uma área da Inteligência Artificial que permite que computadores aprendam a tomar decisões
+                    a partir de dados, sem serem programados diretamente para isso. 
+                </p>
+                <p>
+                    Em vez de seguir regras fixas, o computador analisa padrões — por exemplo, aprender a identificar gatos e cachorros em imagens ao ver milhares de exemplos.
+                </p>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🧠 O que são Redes Neurais?</h3>
+            <article>
+                <p>
+                    As <strong>redes neurais artificiais</strong> são sistemas compostos por unidades chamadas <strong>neurônios artificiais</strong>, inspiradas no funcionamento do cérebro humano.
+                </p>
+                <p>
+                    Cada neurônio recebe informações, processa e envia um resultado a outros neurônios — formando uma <strong>camada</strong>. As camadas se conectam,
+                    criando redes capazes de reconhecer padrões complexos.
+                </p>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>⚙️ Demonstração: Rede Neural Aprendendo</h3>
+            <div class="aprendizado">
+                <p>Clique no botão para simular uma rede neural "aprendendo" a identificar um padrão simples.</p>
+                <div id="rede">
+                    <div class="neuronio">A</div>
+                    <div class="neuronio">B</div>
+                    <div class="neuronio">C</div>
+                    <div class="neuronio">D</div>
+                    <div class="neuronio">E</div>
+                </div>
+                <button class="botao" onclick="aprender()">Aprender</button>
+                <div class="resultado-aprendizado" id="resultado"></div>
+            </div>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>📚 Exemplos Reais</h3>
+            <ul>
+                <li><strong>Reconhecimento facial:</strong> Redes neurais identificam rostos em fotos e vídeos.</li>
+                <li><strong>Tradução automática:</strong> Sistemas como o Google Tradutor usam aprendizado de máquina para entender co

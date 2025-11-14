@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fogo Colorido | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Fogo Colorido</h1>
+            <p>Aprenda como diferentes elementos químicos produzem cores distintas nas chamas e os cuidados necessários.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🔥 Como Funciona o Fogo Colorido</h3>
+            <article>
+                <p>
+                    Cada elemento químico emite luz em diferentes comprimentos de onda quando aquecido. 
+                    Essa emissão é percebida como cores variadas na chama. Por exemplo:
+                </p>
+                <ul>
+                    <li>Sódio → Amarelo</li>
+                    <li>Potássio → Lilás</li>
+                    <li>Cobre → Verde</li>
+                    <li>Estrôncio → Vermelho</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>⚠️ Segurança</h4>
+                <p>
+                    Este experimento deve ser realizado com a presença de um adulto. 
+                    Sempre utilize proteção adequada e cuidado ao manusear fogo e produtos químicos.
+                </p>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>🎥 Vídeo Demonstrativo</h3>
+            <article>
+                <div style="text-align:center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OMe_X-oh2mc?si=5JDLtC6aSBFYQwkV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>💻 Simulador de Cores de Chama</h3>
+            <p>Selecione um elemento químico para ver qual cor ele produziria na chama:</p>
+            <div class="calculadora">
+                <select id="elemento">
+                    <option value="">Selecione...</option>
+                    <option value="Sódio">Sódio</option>
+                    <option value="Potássio">Potássio</option>
+                    <option value="Cobre">Cobre</option>
+                    <option value="Estrôncio">Estrôncio</option>
+                </select>
+                <button onclick="mostrarCor()">Mostrar Cor</button>
+                <p id="resultadoCor"></p>
+            </div>
+        </section>
+
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Química</h3>
+            <div class="canal-item">
+                <h4>Manual do Mundo</h4>
+                <p>Experimentos divertidos e educativos, incluindo química de chamas coloridas.</p>
+                <a href="https://www.youtube.com/@manualdomundo" target="_blank">Acessar Canal</a>
+            </div>
+            <div class="canal-item">
+                <h4>Química em Ação</h4>
+                <p>Explicações de fenômenos químicos e experimentos simples para estudantes.</p>
+                <a href="https://www.youtube.com/@QuimicaEmAcao" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function mostrarCor() {
+            const elemento = document.getElementById("elemento").value;
+            const resultado = document.getElementById("resultadoCor");
+            let cor = "";
+
+            switch(elemento) {
+                case "Sódio":
+                    cor = "Amarelo";
+                    break;
+                case "Potássio":
+                    cor = "Lilás";
+                    break;
+                case "Cobre":
+                    cor = "Verde";
+                    break;
+                case "Estrôncio":
+                    cor = "Vermelho";
+                    break;
+                default:
+                    resultado.innerHTML = "Selecione um elemento válido.";
+                    return;
+            }
+
+            resultado.innerHTML = `<strong>Cor na chama:</strong> ${cor}`;
+        }
+    </script>
+
+</body>
+</html>

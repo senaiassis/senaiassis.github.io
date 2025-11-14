@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Biologia | Ciência Fácil</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <style>
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .modal-conteudo {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+        }
+
+        .modal-conteudo h3 {
+            color: #42282c;
+            margin-bottom: 15px;
+        }
+
+        .modal-conteudo p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .fechar-modal {
+            background-color: #42282c;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .fechar-modal:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container-menu">
+        <div class="logo">
+            <a href="index.html">Ciência Fácil</a>
+        </div>
+        <nav class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="fisica.html">Física</a>
+            <a href="quimica.html">Química</a>
+            <a href="biologia.html">Biologia</a>
+            <a href="experimentos.html">Experimentos</a>
+            <a href="astronomia.html">Astronomia</a>
+            <a href="matematica.html">Matemática</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="parcerias.html">Parcerias</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main class="layout-principal-conteudo">
+    <section class="pagina-titulo">
+        <h1>Quiz de Biologia: Célula e Citologia (Básico)</h1>
+        <p>Teste seus conhecimentos sobre organelas e funções celulares!</p>
+    </section>
+
+    <section class="conteudo-topico">
+
+        <form id="quizForm">
+
+            <!-- Pergunta 1 -->
+            <div class="quiz-pergunta">
+                <h4>1. Qual organela é responsável pela produção de energia na célula?</h4>
+                <label><input type="radio" name="q1" value="correto"> Mitocôndria</label>
+                <label><input type="radio" name="q1" value="errado"> Ribossomo</label>
+                <label><input type="radio" name="q1" value="errado"> Lisossomo</label>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="quiz-pergunta">
+                <h4>2. Onde ocorre a síntese de proteínas?</h4>
+                <label><input type="radio" name="q2" value="errado"> Núcleo</label>
+                <label><input type="radio" name="q2" value="correto"> Ribossomo</label>
+                <label><input type="radio" name="q2" value="errado"> Cloroplasto</label>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="quiz-pergunta">
+                <h4>3. Qual organela armazena material genético?</h4>
+                <label><input type="radio" name="q3" value="correto"> Núcleo</label>
+                <label><input type="radio" name="q3" value="errado"> Mitocôndria</label>
+                <label><input type="radio" name="q3" value="errado"> Retículo Endoplasmático</label>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="quiz-pergunta">
+                <h4>4. Qual organela realiza digestão intracelular?</h4>
+                <label><input type="radio" name="q4" value="errado"> Ribossomo</label>
+                <label><input type="radio" name="q4" value="correto"> Lisossomo</label>
+                <label><input type="radio" name="q4" value="errado"> Complexo Golgiense</label>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="quiz-pergunta">
+                <h4>5. Qual organela está presente apenas em células vegetais?</h4>
+                <label><input type="radio" name="q5" value="correto"> Cloroplasto</label>
+                <label><input type="radio" name="q5" value="errado"> Mitocôndria</label>
+                <label><input type="radio" name="q5" value="errado"> Lisossomo</label>
+            </div>
+
+            <button type="button" onclick="verificarQuiz()">Verificar Respostas</button>
+        </form>
+
+    </section>
+</main>
+
+<!-- Modal de Feedback -->
+<div id="modalFeedback" class="modal">
+    <div class="modal-conteudo">
+        <button class="fechar-modal" onclick="fecharModal()">Fechar</button>
+        <h3>Resultado do Quiz</h3>
+        <p id="modalMensagem"></p>
+        <p id="modalErros"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function verificarQuiz() {
+    const respostas = ["correto","correto","correto","correto","correto"];
+    let pontos = 0;
+    let erros = [];
+
+    for (let i = 1; i <= respostas.length; i++) {
+        const radios = document.getElementsByName("q"+i);
+        let marcada = false;
+        for (const radio of radios) {
+            if (radio.checked) {
+                marcada = true;
+                if (radio.value === "correto") {
+                    pontos++;
+                } else {
+                    erros.push(i);
+                }
+            }
+        }
+        if (!marcada) erros.push(i);
+    }
+
+    let mensagem = "";
+    if (pontos === respostas.length) {
+        mensagem = "🎉 Parabéns! Você acertou todas as questões!";
+    } else if (pontos >= 3) {
+        mensagem = `✨ Muito bem! Você acertou ${pontos} de ${respostas.length} questões.`;
+    } else {
+        mensagem = `💡 Você acertou apenas ${pontos} de ${respostas.length}.`;
+    }
+
+    let errosMsg = "";
+    if (erros.length > 0 && pontos !== respostas.length) {
+        errosMsg = `❌ Questões erradas: ${erros.join(", ")}`;
+    }
+
+    document.getElementById("modalMensagem").innerHTML = mensagem;
+    document.getElementById("modalErros").innerHTML = errosMsg;
+    document.getElementById("modalFeedback").style.display = "block";
+}
+
+function fecharModal() {
+    document.getElementById("modalFeedback").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimentos Fáceis | Ciência Fácil</title>
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css" /> 
+    <link rel="stylesheet" href="../paginas.css" />
+    <style>
+        /* ===== Modal ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .modal-content h4 {
+            color: #42282c;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            color: #42282c;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #6ca19e;
+        }
+
+        .conteudo-topico a.guia {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #42282c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .conteudo-topico a.guia:hover {
+            opacity: 0.9;
+        }
+
+        /* Responsividade para vídeos */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container-menu">
+        <div class="logo">
+            <a href="index.html">Ciência Fácil</a>
+        </div>
+        
+        <nav class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="fisica.html">Física</a>
+            <a href="quimica.html">Química</a>
+            <a href="biologia.html">Biologia</a>
+            <a href="experimentos.html">Experimentos</a>
+            <a href="astronomia.html">Astronomia</a>
+            <a href="matematica.html">Matemática</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="podcast.html">Podcast</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="parcerias.html">Parcerias</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main class="layout-principal-conteudo">
+    
+    <section class="pagina-titulo">
+        <h1>Experimentos Científicos</h1>
+        <p>Coloque a mão na massa! Guias passo a passo para replicar a ciência em casa com segurança.</p>
+    </section>
+
+    <section class="conteudo-topico">
+        <h3>Experimentos Populares</h3>
+        
+        <article>
+            <h4>O Vulcão de Bicarbonato de Sódio</h4>
+            <p>Um clássico da química caseira! Aprenda a montar sua erupção usando vinagre e bicarbonato, entendendo o gás liberado (CO₂).</p>
+            <a class="guia" onclick="abrirModal('exp1')">Ver Experimento</a>
+        </article>
+
+        <article>
+            <h4>Extraindo DNA da Banana</h4>
+            <p>Experimento prático de biologia onde se extrai o DNA de uma banana usando produtos simples.</p>
+            <a class="guia" onclick="abrirModal('exp2')">Ver Experimento</a>
+        </article>
+
+        <article>
+            <h4>Densidade e Flutuabilidade de Objetos em Diferentes Líquidos</h4>
+            <p>Diferentes líquidos (água, óleo, álcool) e objetos (clips, moedas, rolhas) são usados para mostrar quais objetos flutuam ou afundam. Demonstra o conceito de densidade e relação massa/volume.</p>
+            <a class="guia" onclick="abrirModal('exp3')">Ver Experimento</a>
+        </article>
+
+        <article>
+            <h4>Crescimento de Cristais de Sal</h4>
+            <p>Dissolve-se sal em água quente e deixa-se evaporar lentamente. Formam-se cristais visíveis ao longo de dias, demonstrando processos de cristalização e saturação.</p>
+            <a class="guia" onclick="abrirModal('exp4')">Ver Experimento</a>
+        </article>
+
+        <article>
+            <h4>Plantas e Fototropismo</h4>
+            <p>Um experimento de biologia: plantas jovens são colocadas em caixas com uma abertura para a luz. Observa-se como crescem na direção da luz, demonstrando fototropismo e adaptação das plantas ao ambiente.</p>
+            <a class="guia" onclick="abrirModal('exp5')">Ver Experimento</a>
+        </article>
+    </section>
+
+    <section class="avisos-seguranca">
+        <h3>⚠ Regras de Ouro da Ciência Caseira</h3>
+        <ul>
+            <li>Sempre peça a supervisão de um adulto para experimentos com calor ou objetos cortantes.</li>
+            <li>Use óculos de proteção ao manusear produtos químicos.</li>
+            <li>Nunca misture produtos de limpeza aleatoriamente.</li>
+        </ul>
+    </section>
+
+</main>
+
+<!-- ===== Modais ===== -->
+
+<div id="exp1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal('exp1')">&times;</span>
+        <h4>O Vulcão de Bicarbonato de Sódio</h4>
+        <p>Misture vinagre e bicarbonato de sódio para observar a reação ácido-base que libera CO₂. Aprenda sobre gases e pressão de forma divertida!</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0yOznKmgpxQ?si=ZJK58RYdm4hqkGgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="exp2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal('exp2')">&times;</span>
+        <h4>Extraindo DNA da Banana</h4>
+        <p>Veja passo a passo como extrair o DNA da banana usando detergente, álcool e sal. Entenda a biologia de forma visual!</p>
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/ld1-Y-3dJhA?si=blaA9NoY0yOvJh-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="exp3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal('exp3')">&times;</span>
+        <h4>Densidade e Flutuabilidade de Objetos em Diferentes Líquidos</h4>
+        <p>Demonstra o conceito de densidade e relação massa/volume.</p>
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/XOWeMwhVWFI?si=y0yAPSpFSCcAWoyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="exp4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal('exp4')">&times;</span>
+        <h4>Cortando o PI</h4>
+        <p>Formam-se cristais visíveis ao longo de dias, demonstrando cristalização e saturação.</p>
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/K8Cr1SdfUAQ?si=LJrBCD4DLwV3ky1b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="exp5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal('exp5')">&times;</span>
+        <h4>Fases da Lua</h4>
+        <p>Observa-se como crescem na direção da luz, demonstrando fototropismo.</p>
+        <div class="video-container">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/22bXGvLM2Gw?si=PjonhU2BUBa3UPs6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function abrirModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function fecharModal(id) {
+        const modal = document.getElementById(id);
+        const iframe = modal.querySelector('iframe');
+
+        if(iframe) {
+            const src = iframe.src;
+            iframe.src = src; // reinicia o vídeo do YouTube ao fechar
+        }
+
+        modal.style.display = "none";
+    }
+
+    // Fecha modal ao clicar fora
+    window.onclick = function(event) {
+        const modais = document.querySelectorAll('.modal');
+        modais.forEach(modal => {
+            if(event.target === modal) {
+                const iframe = modal.querySelector('iframe');
+                if(iframe) {
+                    const src = iframe.src;
+                    iframe.src = src;
+                }
+                modal.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leis de Mendel Descomplicadas | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Leis de Mendel Descomplicadas</h1>
+            <p>Entenda de forma simples como funcionam a 1ª e a 2ª Lei de Mendel e os conceitos de genótipo, fenótipo, homozigoto e heterozigoto.</p>
+        </section>
+
+        <!-- 🌱 Tópico 1 -->
+        <section class="conteudo-topico">
+            <h3>🌱 A Origem da Genética</h3>
+            <article>
+                <h4>Quem foi Gregor Mendel?</h4>
+                <p><strong>Gregor Mendel</strong> foi um monge austríaco do século XIX considerado o “pai da genética”. Ele realizou experimentos com plantas de ervilha e descobriu as leis básicas da hereditariedade.</p>
+                <p>Com base nas observações, Mendel concluiu que características são transmitidas de pais para filhos através de “fatores hereditários”, hoje conhecidos como <strong>genes</strong>.</p>
+            </article>
+        </section>
+
+        <!-- 🧬 Tópico 2 -->
+        <section class="conteudo-topico">
+            <h3>🧬 1ª Lei de Mendel — Lei da Segregação dos Fatores</h3>
+
+            <article>
+                <h4>Conceito</h4>
+                <p>A <strong>Primeira Lei de Mendel</strong> afirma que cada característica é determinada por dois fatores (alelos), que se separam durante a formação dos gametas. Assim, cada gameta recebe apenas um fator de cada par.</p>
+            </article>
+
+            <article>
+                <h4>Exemplo Clássico</h4>
+                <p>Ao cruzar plantas de ervilha <strong>amarelas (AA)</strong> com <strong>verdes (aa)</strong>, Mendel observou que toda a primeira geração (F1) apresentava sementes amarelas (<strong>Aa</strong>).</p>
+                <p>Ao cruzar indivíduos da geração F1 entre si (<strong>Aa × Aa</strong>), a geração seguinte (F2) apresentou proporção de <strong>3 amarelas : 1 verde</strong>.</p>
+            </article>
+
+            <article>
+                <h4>Genótipo e Fenótipo</h4>
+                <ul>
+                    <li><strong>Genótipo:</strong> Conjunto de genes que o indivíduo possui (ex: AA, Aa, aa).</li>
+                    <li><strong>Fenótipo:</strong> Característica visível (ex: cor amarela ou verde).</li>
+                    <li><strong>Homozigoto:</strong> Dois alelos iguais (AA ou aa).</li>
+                    <li><strong>Heterozigoto:</strong> Alelos diferentes (Aa).</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 🌾 Tópico 3 -->
+        <section class="conteudo-topico">
+            <h3>🌾 2ª Lei de Mendel — Lei da Segregação Independente</h3>
+
+            <article>
+                <h4>Conceito</h4>
+                <p>A <strong>Segunda Lei de Mendel</strong> afirma que diferentes características são herdadas de forma independente umas das outras. Ou seja, a herança de uma característica não interfere na herança de outra.</p>
+            </article>
+
+            <article>
+                <h4>Exemplo Clássico</h4>
+                <p>Ao estudar a cor e a textura das sementes (<strong>amarela/lisa</strong> e <strong>verde/rugosa</strong>), Mendel concluiu que a combinação dos genes ocorre de maneira independente, gerando várias combinações possíveis na descendência.</p>
+                <p>O cruzamento entre <strong>AaBb × AaBb</strong> resulta em uma proporção fenotípica de <strong>9:3:3:1</strong>.</p>
+            </article>
+        </section>
+
+        <!-- 🧫 Simulador -->
+        <section class="conteudo-topico">
+            <h3>🧫 Simulador de Cruzamentos</h3>
+            <div class="calculadora">
+                <p>Insira os alelos dos pais (ex: Aa e Aa):</p>
+                <input type="text" id="pai1" maxlength="2" placeholder="Pai 1">
+                <input type="text" id="pai2" maxlength="2" placeholder="Pai 2">
+                <button onclick="simularCruzamento()">Simular</button>
+                <p id="resultado"></p>
+            </div>
+        </section>
+
+        <!-- 📚 Exercícios -->
+        <section class="conteudo-topico exercicios">
+            <h3>📚 Exemplos e Aplicações</h3>
+            <p><strong>Exemplo 1:</strong> Cruzamento Aa × Aa → 25% AA, 50% Aa, 25% aa.</p>
+            <p><strong>Exemplo 2:</strong> Cruzamento AA × aa → 100% Aa (todos heterozigotos).</p>
+            <p><strong>Exemplo 3:</strong> Cruzamento AaBb × AaBb → 9:3:3:1 (2ª Lei de Mendel).</p>
+        </section>
+
+        <!-- 🔗 Recursos -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+            <ul>
+                <li><strong>Simulador de Cruzamento:</strong> Veja as combinações possíveis de alelos.</li>
+                <li><strong>Exemplos Resolvidos:</strong> Explore casos clássicos de Mendel.</li>
+                <li><strong>Diagramas:</strong> Entenda graficamente as proporções genéticas.</li>
+            </ul>
+        </section>
+
+        <!-- 📺 Canais -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Biologia</h3>
+
+            <div class="canal-item">
+                <h4>Canal Biologia Total</h4>
+                <p>Explicações detalhadas sobre genética e hereditariedade com linguagem simples.</p>
+                <a href="https://www.youtube.com/@biologiatotal" target="_blank">Acessar Canal</a>
+            </div>
+
+            <div class="canal-item">
+                <h4>Descomplica</h4>
+                <p>Aulas dinâmicas sobre as Leis de Mendel e cruzamentos genéticos.</p>
+                <a href="https://www.youtube.com/@descomplica" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- 🧪 Script -->
+    <script>
+        function simularCruzamento() {
+            const pai1 = document.getElementById("pai1").value.trim();
+            const pai2 = document.getElementById("pai2").value.trim();
+            const resultado = document.getElementById("resultado");
+
+            if (pai1.length !== 2 || pai2.length !== 2) {
+                resultado.innerHTML = "⚠️ Insira dois alelos válidos para cada pai (ex: Aa).";
+                return;
+            }
+
+            const combinacoes = [];
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 2; j++) {
+                    combinacoes.push(pai1[i] + pai2[j]);
+                }
+            }
+
+            const formatadas = combinacoes.map(c => [...c].sort().join(""));
+            const contagem = {};
+            formatadas.forEach(c => contagem[c] = (contagem[c] || 0) + 1);
+
+            resultado.innerHTML = "<strong>Combinações possíveis:</strong><br>" +
+                Object.entries(contagem).map(([gen, qtd]) => `${gen}: ${qtd}/4`).join("<br>");
+        }
+    </script>
+
+</body>
+</html>

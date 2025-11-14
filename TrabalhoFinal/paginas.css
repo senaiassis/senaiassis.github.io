@@ -1,0 +1,122 @@
+/* --- Estilos Específicos da Página de Física --- */
+
+/* 1. ESTILO DE PÁGINA ATIVA NO HEADER */
+.menu-links a[href="paginas/fisica.html"] {
+    color: var(--cor4); 
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* 2. ESTILO DO CONTEÚDO PRINCIPAL DA PÁGINA */
+
+.layout-principal-conteudo {
+    display: block;
+    max-width: 900px;
+}
+
+.pagina-titulo {
+    background-color: var(--cor2);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.pagina-titulo h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+.pagina-titulo p {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.conteudo-topico h3 {
+    color: var(--marrom);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid var(--cor5);
+}
+
+/* Ajuste nos artigos para este conteúdo específico */
+article h4 {
+    color: var(--cor2);
+}
+
+article a {
+    color: var(--cor5);
+}
+
+
+/* 3. ESTILO PARA RECURSOS RELACIONADOS (LISTA) */
+.recursos-relacionados {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cor3);
+    margin-top: 40px;
+}
+
+.recursos-relacionados h3 {
+    color: var(--marrom);
+    margin-bottom: 15px;
+}
+
+.recursos-relacionados ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.recursos-relacionados li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: var(--marrom);
+}
+
+.recursos-relacionados strong {
+    color: var(--cor5);
+}
+
+/* 4. NOVO ESTILO PARA RECOMENDAÇÕES EXTERNAS (CANAIS) */
+.recomendacoes-externas {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--cor3); /* Linha separadora sutil */
+}
+
+.recomendacoes-externas h3 {
+    color: var(--marrom);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.canal-item {
+    background-color: white;
+    border: 1px solid var(--cor4);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.canal-item h4 {
+    color: var(--cor5);
+    margin-bottom: 5px;
+}
+
+.canal-item p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.canal-item a {
+    color: var(--cor2);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.canal-item a:hover {
+    text-decoration: underline;
+}

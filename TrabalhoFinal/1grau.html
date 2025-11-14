@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções do 1º Grau | Ciência Fácil</title>
+    <link rel="stylesheet" href="1grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Funções do 1º Grau: A Equação da Reta</h1>
+            <p>Descubra como as funções lineares representam retas no plano cartesiano e entenda suas aplicações.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>📘 Conceito Fundamental</h3>
+
+            <article>
+                <h4>O que é uma Função do 1º Grau?</h4>
+                <p>
+                    Uma <strong>função do 1º grau</strong> é uma expressão matemática escrita na forma 
+                    <strong>f(x) = ax + b</strong>, onde <strong>a</strong> e <strong>b</strong> são números reais e <strong>a ≠ 0</strong>.
+                </p>
+                <p>
+                    O número <strong>a</strong> é chamado de <em>coeficiente angular</em> e indica a inclinação da reta.  
+                    Já <strong>b</strong> é o <em>coeficiente linear</em>, que mostra o ponto onde a reta corta o eixo y.
+                </p>
+            </article>
+
+            <article>
+                <h4>Exemplo Prático</h4>
+                <p>
+                    Considere a função <strong>f(x) = 2x + 3</strong>.  
+                    Nesse caso, <strong>a = 2</strong> e <strong>b = 3</strong>.  
+                    Isso significa que a reta sobe 2 unidades no eixo y a cada 1 unidade de aumento em x, 
+                    e corta o eixo y no ponto <strong>(0, 3)</strong>.
+                </p>
+            </article>
+
+            <h3>🧮 Características da Equação da Reta</h3>
+
+            <article>
+                <h4>Coeficiente Angular (a)</h4>
+                <p>
+                    O valor de <strong>a</strong> define a inclinação da reta:
+                </p>
+                <ul>
+                    <li>Se <strong>a > 0</strong> → a reta é <strong>crescente</strong> (sobe da esquerda para a direita);</li>
+                    <li>Se <strong>a < 0</strong> → a reta é <strong>decrescente</strong> (desce da esquerda para a direita);</li>
+                    <li>Se <strong>a = 0</strong> → não é uma função do 1º grau, mas uma reta horizontal (constante).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Coeficiente Linear (b)</h4>
+                <p>
+                    O coeficiente <strong>b</strong> indica o ponto onde a reta intercepta o eixo y, ou seja, o valor de f(x) quando x = 0.
+                </p>
+                <p>
+                    No exemplo <strong>f(x) = 2x + 3</strong>, temos <strong>b = 3</strong>, então a reta corta o eixo y em (0, 3).
+                </p>
+            </article>
+
+            <article>
+                <h4>Determinando a Equação de uma Reta</h4>
+                <p>
+                    Se conhecemos dois pontos da reta, <strong>(x₁, y₁)</strong> e <strong>(x₂, y₂)</strong>, 
+                    podemos determinar a equação usando:
+                </p>
+                <p>
+                    <strong>a = (y₂ - y₁) / (x₂ - x₁)</strong>
+                    <br>e, em seguida, substituímos um dos pontos na fórmula geral <strong>y = ax + b</strong> para achar <strong>b</strong>.
+                </p>
+                <p>
+                    Exemplo: pontos (1, 3) e (3, 7)  
+                    → a = (7 - 3) / (3 - 1) = 2  
+                    → substituindo (1, 3): 3 = 2·1 + b → b = 1  
+                    Logo, a equação é <strong>y = 2x + 1</strong>.
+                </p>
+            </article>
+        </section>
+
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+
+            <!-- GERADOR DE FUNÇÃO -->
+            <div class="gerador-funcao">
+                <h4>🧮 Gerador de Função do 1º Grau</h4>
+                <p>Insira dois pontos para descobrir a equação da reta:</p>
+                <input type="number" id="x1" placeholder="x₁">
+                <input type="number" id="y1" placeholder="y₁">
+                <input type="number" id="x2" placeholder="x₂">
+                <input type="number" id="y2" placeholder="y₂">
+                <button onclick="gerarFuncao()">Gerar Equação</button>
+                <p id="resultadoFuncao"></p>
+            </div>
+
+            <hr>
+
+            <!-- EXERCÍCIOS PRÁTICOS -->
+            <div class="exercicios">
+                <h4>📘 Exercícios Práticos</h4>
+                <p>Clique em um exercício para ver a equação da reta:</p>
+                <ul>
+                    <li onclick="mostrarExercicio(1)">1️⃣ Pontos (1,2) e (3,6)</li>
+                    <li onclick="mostrarExercicio(2)">2️⃣ Pontos (0,3) e (4,7)</li>
+                    <li onclick="mostrarExercicio(3)">3️⃣ Pontos (-1,-2) e (2,4)</li>
+                </ul>
+                <div id="resolucaoFuncao"></div>
+            </div>
+
+            <hr>
+
+            <!-- SIMULADOR GRÁFICO -->
+            <div class="grafico">
+                <h4>📊 Simulador Gráfico</h4>
+                <p>Veja como os valores de “a” e “b” afetam a reta:</p>
+                <canvas id="graficoCanvas" width="400" height="300" style="background: #fff; border-radius: 10px;"></canvas>
+            </div>
+        </section>
+
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Matemática</h3>
+
+            <div class="canal-item">
+                <h4>Professor Ferretto</h4>
+                <p>Vídeos objetivos explicando como montar, interpretar e aplicar funções do 1º grau em problemas do cotidiano.</p>
+                <a href="https://www.youtube.com/@Ferretto" target="_blank">Acessar Canal</a>
+            </div>
+
+            <div class="canal-item">
+                <h4>Matemática Rio</h4>
+                <p>Aulas interativas com exemplos visuais sobre a inclinação da reta e o significado dos coeficientes “a” e “b”.</p>
+                <a href="https://www.youtube.com/@MatematicaRio" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // ====================== GERADOR DE FUNÇÃO ======================
+        function gerarFuncao() {
+            const x1 = parseFloat(document.getElementById("x1").value);
+            const y1 = parseFloat(document.getElementById("y1").value);
+            const x2 = parseFloat(document.getElementById("x2").value);
+            const y2 = parseFloat(document.getElementById("y2").value);
+            const resultado = document.getElementById("resultadoFuncao");
+
+            if ([x1, y1, x2, y2].some(v => isNaN(v)) || x1 === x2) {
+                resultado.innerHTML = "Insira valores válidos (x₁ ≠ x₂).";
+                return;
+            }
+
+            const a = (y2 - y1) / (x2 - x1);
+            const b = y1 - a * x1;
+
+            resultado.innerHTML = `<strong>Equação da reta:</strong> y = ${a.toFixed(2)}x + ${b.toFixed(2)}`;
+            desenharGrafico(a, b);
+        }
+
+        // ====================== EXERCÍCIOS PRÁTICOS ======================
+        function mostrarExercicio(num) {
+            const resolucao = document.getElementById("resolucaoFuncao");
+            let texto = "";
+
+            switch (num) {
+                case 1:
+                    texto = `Pontos (1,2) e (3,6)<br>a = (6-2)/(3-1) = 2<br>b = 2*1 → b = 0<br>Equação: y = 2x`;
+                    desenharGrafico(2, 0);
+                    break;
+                case 2:
+                    texto = `Pontos (0,3) e (4,7)<br>a = (7-3)/(4-0) = 1<br>b = 3 - 1*0 = 3<br>Equação: y = x + 3`;
+                    desenharGrafico(1, 3);
+                    break;
+                case 3:
+                    texto = `Pontos (-1,-2) e (2,4)<br>a = (4-(-2))/(2-(-1)) = 2<br>b = -2 - 2*(-1) = 0<br>Equação: y = 2x`;
+                    desenharGrafico(2, 0);
+                    break;
+            }
+
+            resolucao.innerHTML = texto;
+        }
+
+        // ====================== SIMULADOR GRÁFICO ======================
+        function desenharGrafico(a, b) {
+            const canvas = document.getElementById("graficoCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const escala = 20;
+            const centroX = canvas.width / 2;
+            const centroY = canvas.height / 2;
+
+            // Eixos
+            ctx.beginPath();
+            ctx.moveTo(0, centroY);
+            ctx.lineTo(canvas.width, centroY);
+            ctx.moveTo(centroX, 0);
+            ctx.lineTo(centroX, canvas.height);
+            ctx.strokeStyle = "#42282c";
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Reta
+            ctx.beginPath();
+            for (let xPixel = 0; xPixel < canvas.width; xPixel++) {
+                const x = (xPixel - centroX) / escala;
+                const y = a * x + b;
+                const yPixel = centroY - y * escala;
+                if (xPixel === 0) ctx.moveTo(xPixel, yPixel);
+                else ctx.lineTo(xPixel, yPixel);
+            }
+            ctx.strokeStyle = "#6ca19e";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nossa Equipe | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <style>
+        /* estilos locais para a página de equipe (mantém as cores do site) */
+        .filtro {
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            margin: 12px 0;
+            align-items:center;
+        }
+        .filtro select, .filtro button {
+            padding:8px 10px;
+            border-radius:6px;
+            border:1px solid rgba(0,0,0,0.08);
+            background:#fff;
+        }
+        .grid-equipe {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 14px;
+        }
+        .card-membro {
+            background:#fff;
+            border-left:5px solid var(--cor2);
+            padding:14px;
+            border-radius:8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            text-align:center;
+        }
+        .card-membro img {
+            width:110px;
+            height:110px;
+            object-fit:cover;
+            border-radius:50%;
+            border:4px solid var(--cor3);
+            margin-bottom:10px;
+        }
+        .cargo {
+            color: var(--cor5);
+            font-weight:700;
+            margin-bottom:6px;
+        }
+        .mini-bio {
+            color: var(--marrom);
+            font-size:0.95rem;
+            margin-bottom:10px;
+            min-height:48px;
+        }
+        .btn-perfil {
+            background: var(--marrom);
+            color:#fff;
+            border:none;
+            padding:8px 12px;
+            border-radius:6px;
+            cursor:pointer;
+            font-weight:700;
+        }
+        .btn-perfil:hover { opacity:0.95; }
+
+        /* Modal de perfil */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .modal {
+            background: #fff;
+            width: 92%;
+            max-width: 760px;
+            border-radius: 10px;
+            padding: 18px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        .modal .close {
+            position:absolute;
+            right:12px;
+            top:12px;
+            background: var(--cor5);
+            color:#fff;
+            border:none;
+            border-radius:6px;
+            padding:6px 8px;
+            cursor:pointer;
+        }
+        .perfil-top {
+            display:flex;
+            gap:18px;
+            align-items:center;
+            margin-bottom:10px;
+        }
+        .perfil-top img {
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            border-radius:10px;
+            border:4px solid var(--cor2);
+        }
+        .perfil-dados h3 { margin:0 0 6px 0; }
+        .perfil-dados p { margin:4px 0; color:var(--marrom); }
+
+        .skills {
+            margin-top:10px;
+            display:flex;
+            gap:8px;
+            flex-wrap:wrap;
+        }
+        .skill {
+            background:var(--cor3);
+            color:var(--marrom);
+            padding:6px 8px;
+            border-radius:6px;
+            font-weight:600;
+        }
+
+        /* Responsividade */
+        @media (max-width:600px){
+            .perfil-top { flex-direction:column; align-items:flex-start; }
+            .perfil-top img { width:100px; height:100px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+        <section class="pagina-titulo">
+            <h1>Nossa Equipe</h1>
+            <p>Conheça os professores, designers e desenvolvedores que tornam o Ciência Fácil possível.</p>
+            <p><a href="#perfis" style="color:var(--cor2); font-weight:700;">Ver Perfis...</a></p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>✨ Equipe</h3>
+
+            <div class="filtro">
+                <label class="small">Filtrar por área:</label>
+                <select id="filtroArea">
+                    <option value="todos">Todos</option>
+                    <option value="Desenvolvedor">Desenvolvedor</option>
+                    <option value="Pesquisadora">Pesquisadoras</option>
+                    <option value="Líder">Líder</option>
+                </select>
+                <button onclick="resetFiltro()">Limpar filtro</button>
+            </div>
+
+            <div id="grid" class="grid-equipe">
+                <!-- Card: Líder -->
+                <div class="card-membro" data-area="Líder">
+                    <img src="assets/membros/talles.jpg" alt="Talles Lopes">
+                    <div class="cargo">Desenvolvedor Líder</div>
+                    <div class="mini-bio">Desenvolvedor, com 10 anos de experiência no ramo. Especial interesse em sites de ajuda a sociedade.</div>
+                    <button class="btn-perfil" data-id="m1">Ver Perfil</button>
+                </div>
+
+                <!-- Card: Desenvolvedor -->
+                <div class="card-membro" data-area="Desenvolvedor">
+                    <img src="assets/membros/Kaua.jpg" alt="Kaua Machado">
+                    <div class="cargo">Desenvolvedor</div>
+                    <div class="mini-bio">Desenvolvedor braço direito do Talles, principal nome para assumir a liderança. Especial Interesse em ajudar estudantes.</div>
+                    <button class="btn-perfil" data-id="m2">Ver Perfil</button>
+                </div>
+
+                <!-- Card: Pesquisadora -->
+                <div class="card-membro" data-area="Pesquisadora">
+                    <img src="assets/membros/Anna.jpg" alt="Anna Nascimento">
+                    <div class="cargo">Pesquisadora</div>
+                    <div class="mini-bio">Pesquisadora de Conteúdo: Aplica metodologia de pesquisa para desenvolver materiais precisos e relevantes, que direcionam o estudante ao sucesso acadêmico.</div>
+                    <button class="btn-perfil" data-id="m3">Ver Perfil</button>
+                </div>
+
+                <div class="card-membro" data-area="Pesquisadora">
+                    <img src="assets/membros/Leticia.jpg" alt="Leticia Feitosa">
+                    <div class="cargo">Pesquisadora</div>
+                    <div class="mini-bio">Estrutura e elabora o conteúdo educativo, tornando o aprendizado envolvente e fácil de absorver para auxiliar os estudantes em seus estudos</div>
+                    <button class="btn-perfil" data-id="m4">Ver Perfil</button>
+                </div>
+
+                <div class="card-membro" data-area="Pesquisadora">
+                    <img src="assets/membros/Gaby.jpg" alt="Gabrielly Violsa">
+                    <div class="cargo">Pesquisadora</div>
+                    <div class="mini-bio">Profissional que transforma conteúdos acadêmicos complexos em materiais claros, confiáveis e envolventes, garantindo a qualidade e eficácia do aprendizado para o estudante.</div>
+                    <button class="btn-perfil" data-id="m5">Ver Perfil</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal de perfil -->
+        <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <button class="close" id="closeModal">Fechar</button>
+                <div class="perfil-top">
+                    <img id="modalImg" src="assets/membros/professor1.jpg" alt="">
+                    <div class="perfil-dados">
+                        <h3 id="modalTitle">Nome do Membro</h3>
+                        <div class="cargo" id="modalCargo">Cargo / Área</div>
+                        <p id="modalBio">Biografia resumida e experiência do membro.</p>
+                        <div class="skills" id="modalSkills"></div>
+                        <p style="margin-top:8px;"><a id="modalEmail" href="#">Email</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Dados de exemplo dos perfis — edite conforme necessário
+        const perfis = {
+            m1: {
+                nome: "Talles Lopes",
+                cargo: "Desenvolvedor Líder",
+                bio: "Desenvolvedor, com 10 anos de experiência no ramo. Especial interesse em sites de ajuda a sociedade.",
+                skills: ["BackEnd", "FrontEnd", "JavaScript"],
+                img: "assets/membros/Talles.jpg",
+                email: "talles@cienciafacil.org"
+            },
+            m2: {
+                nome: "Kauã Machado",
+                cargo: "Desenvolvedor",
+                bio: "Desenvolvedor braço direito do Talles, principal nome para assumir a liderança. Especial Interesse em ajudar estudantes.",
+                skills: ["BackEnd", "FrontEnd", "JavaScript"],
+                img: "assets/membros/Kaua.jpg",
+                email: "kaua@cienciafacil.org"
+            },
+            m3: {
+                nome: "Anna Nascimento",
+                cargo: "Pesquisadora",
+                bio: "Pesquisadora de Conteúdo: Aplica metodologia de pesquisa para desenvolver materiais precisos e relevantes, que direcionam o estudante ao sucesso acadêmico.",
+                skills: ["Pesquisa", "Imagens", "Links"],
+                img: "assets/membros/Anna.jpg",
+                email: "anna@cienciafacil.org"
+            },
+            m4: {
+                nome: "Leticia Feitosa",
+                cargo: "Pesquisadora",
+                bio: "Estrutura e elabora o conteúdo educativo, tornando o aprendizado envolvente e fácil de absorver para auxiliar os estudantes em seus estudos",
+                skills: ["Pesquisa", "Imagens", "Links"],
+                img: "assets/membros/Leticia.jpg",
+                email: "leticia@cienciafacil.org"
+            },
+            m5: {
+                nome: "Gabrielly Violsa",
+                cargo: "Pesquisadora",
+                bio: "Profissional que transforma conteúdos acadêmicos complexos em materiais claros, confiáveis e envolventes, garantindo a qualidade e eficácia do aprendizado para o estudante.",
+                skills: ["Pesquisa", "Imagens", "Links"],
+                img: "assets/membros/Gaby.jpg",
+                email: "gabrielly@cienciafacil.org"
+            }
+        };
+
+        // Abrir modal ao clicar em "Ver Perfil"
+        document.querySelectorAll('.btn-perfil').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-id');
+                abrirModal(id);
+            });
+        });
+
+        function abrirModal(id) {
+            const dados = perfis[id];
+            if (!dados) return;
+            document.getElementById('modalImg').src = dados.img;
+            document.getElementById('modalImg').alt = dados.nome;
+            document.getElementById('modalTitle').innerText = dados.nome;
+            document.getElementById('modalCargo').innerText = dados.cargo;
+            document.getElementById('modalBio').innerText = dados.bio;
+            document.getElementById('modalSkills').innerHTML = dados.skills.map(s => '<span class="skill">'+s+'</span>').join('');
+            const emailEl = document.getElementById('modalEmail');
+            emailEl.href = 'mailto:' + dados.email;
+            emailEl.innerText = dados.email;
+
+            const backdrop = document.getElementById('modalBackdrop');
+            backdrop.style.display = 'flex';
+            backdrop.setAttribute('aria-hidden','false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fechar modal
+        document.getElementById('closeModal').addEventListener('click', fecharModal);
+        document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'modalBackdrop') fecharModal();
+        });
+
+        function fecharModal() {
+            const backdrop = document.getElementById('modalBackdrop');
+            backdrop.style.display = 'none';
+            backdrop.setAttribute('aria-hidden','true');
+            document.body.style.overflow = '';
+        }
+
+        // Filtro por área
+        document.getElementById('filtroArea').addEventListener('change', (e) => {
+            const v = e.target.value;
+            const cards = document.querySelectorAll('.card-membro');
+            cards.forEach(c => {
+                if (v === 'todos' || c.getAttribute('data-area') === v) c.style.display = '';
+                else c.style.display = 'none';
+            });
+        });
+
+        function resetFiltro() {
+            document.getElementById('filtroArea').value = 'todos';
+            document.getElementById('filtroArea').dispatchEvent(new Event('change'));
+        }
+    </script>
+</body>
+</html>

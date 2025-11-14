@@ -1,0 +1,205 @@
+:root{
+    --marrom: #42282c;
+    --cor2: #6ca19e;
+    --cor3: #84abaa;
+    --cor4: #ded1b6; 
+    --cor5: #6d997a;
+}
+
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--cor5);
+    padding: 15px 0;
+}
+
+.container-menu {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+/* ===== Menu ===== */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 5px 10px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu-links a:hover {
+    color: var(--cor4);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ===== Página Título ===== */
+.pagina-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagina-titulo h1 {
+    font-size: 2.5em;
+    color: var(--marrom);
+    margin-bottom: 10px;
+}
+
+.pagina-titulo p {
+    font-size: 1.2em;
+}
+
+/* ===== Conteúdo dos Tópicos ===== */
+.conteudo-topico {
+    margin-bottom: 40px;
+}
+
+.conteudo-topico h3 {
+    border-bottom: 3px solid var(--cor5);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: var(--marrom);
+}
+
+.conteudo-topico article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--cor2);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.conteudo-topico article h4 {
+    color: var(--cor5);
+    margin-bottom: 8px;
+}
+
+.conteudo-topico article p,
+.conteudo-topico article ul {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.conteudo-topico article ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* ===== Calculadora e Exercícios ===== */
+.calculadora input {
+    padding: 6px 8px;
+    margin: 5px 5px 10px 0;
+    width: 80px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.calculadora button {
+    padding: 6px 12px;
+    background-color: var(--marrom);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.calculadora button:hover {
+    opacity: 0.9;
+}
+
+#resultado {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ===== Gráfico ===== */
+.grafico-container canvas {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===== Recursos e Canais ===== */
+.recursos-relacionados ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.recomendacoes-externas .canal-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--cor2);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recomendacoes-externas .canal-item h4 {
+    margin-bottom: 5px;
+    color: var(--cor5);
+}
+
+.recomendacoes-externas .canal-item p {
+    margin-bottom: 8px;
+}
+
+.recomendacoes-externas .canal-item a {
+    color: var(--cor2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recomendacoes-externas .canal-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}

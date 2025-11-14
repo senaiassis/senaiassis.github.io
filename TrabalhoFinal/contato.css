@@ -1,0 +1,197 @@
+:root{
+    --marrom: #42282c;
+    --cor2: #6ca19e;
+    --cor3: #84abaa;
+    --cor4: #ded1b6; 
+    --cor5: #6d997a;
+}
+
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--cor5);
+    padding: 15px 0;
+}
+
+.container-menu {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+/* ===== Menu ===== */
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 5px 10px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu-links a:hover {
+    color: var(--cor4);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Main ===== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ===== Página Título ===== */
+.pagina-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagina-titulo h1 {
+    font-size: 2.5em;
+    color: var(--marrom);
+    margin-bottom: 10px;
+}
+
+.pagina-titulo p {
+    font-size: 1.2em;
+}
+
+/* ===== Conteúdo dos Tópicos ===== */
+.conteudo-topico {
+    margin-bottom: 40px;
+}
+
+.conteudo-topico h3 {
+    border-bottom: 3px solid var(--cor5);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: var(--marrom);
+}
+
+.conteudo-topico article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--cor2);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.conteudo-topico article h4 {
+    color: var(--cor5);
+    margin-bottom: 8px;
+}
+
+.conteudo-topico article p,
+.conteudo-topico article ul {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.conteudo-topico article ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* ===== Formulário de Contato ===== */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid var(--cor2);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: var(--marrom);
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: var(--cor2);
+    box-shadow: 0 0 5px rgba(108,161,158,0.5);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* ===== Botão Enviar ===== */
+form button {
+    background-color: var(--marrom);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+form button:hover {
+    opacity: 0.9;
+    background-color: var(--cor5);
+}
+
+/* ===== Mensagem de Sucesso ===== */
+#mensagem-sucesso {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}

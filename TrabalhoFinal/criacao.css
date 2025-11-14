@@ -1,0 +1,172 @@
+:root{
+    --marrom: #42282c;
+    --cor2: #6ca19e;
+    --cor3: #84abaa;
+    --cor4: #ded1b6; 
+    --cor5: #6d997a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #1c1c1c;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background: var(--cor5);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  
+}
+.container-menu {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    color: white;
+}
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 5px 10px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu-links a:hover {
+    color: var(--cor4);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+header h1 {
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.1em;
+  max-width: 750px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ===== Conteúdo Principal ===== */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 40px 60px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: black;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--cor5);
+  padding-left: 12px;
+}
+
+main p {
+  margin-bottom: 18px;
+  text-align: justify;
+  font-size: 1.05em;
+}
+
+/* ===== Listas ===== */
+ul {
+  margin: 20px 0 30px 25px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+/* ===== Seção CTA ===== */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+  background: #e9f0fb;
+  border-radius: 15px;
+  padding: 40px 20px;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 10px auto 20px auto;
+}
+
+.botao {
+  background-color: var(--cor5);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor2);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .botao {
+    display: inline-block;
+    width: auto;
+    font-size: 1em;
+  }
+}

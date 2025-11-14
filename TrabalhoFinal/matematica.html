@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Física Fácil | Ciência Fácil</title>
+    
+    <link rel="stylesheet" href="../index.css" /> 
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="paginas.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+         <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a> <!-- Dps nois inventa -->
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+  <main class="layout-principal-conteudo">
+        
+        <section class="pagina-titulo">
+            <h1>Matemática</h1>
+            <p>A ferramenta essencial para a ciência, do cálculo ao raciocínio lógico e análise de dados.</p>
+        </section>
+
+        <section class="conteudo-topico">
+            <h3>Tópico em Destaque: Funções (Relações de Dependência)</h3>
+            
+            <article>
+                <h4>Funções do 1º Grau: A Equação da Reta</h4>
+                <p>Entenda o conceito de taxa de variação (coeficiente angular), como construir um gráfico de reta e a aplicação em problemas de preço e tempo.</p>
+                <a href="1grau.html">Ver Lição Completa...</a>
+            </article>
+            
+            <article>
+                <h4>Funções do 2º Grau: A Parábola e seus Segredos</h4>
+                <p>Estudo da função quadrática, cálculo das raízes (Fórmula de Bhaskara) e determinação do vértice (ponto máximo ou mínimo).</p>
+                <a href="2grau.html">Ver Lição Completa...</a>
+            </article>
+        </section>
+        
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Professores (Vídeo Aulas)</h3>
+            
+            <div class="canal-item">
+                <h4>Professor Exemplo 1: Matemática Divertida</h4>
+                <p>Foco em Geometria Espacial e Plana. Utiliza objetos do cotidiano para explicar o cálculo de área, volume e ângulos.</p>
+                <a href="#" target="_blank">Acessar Canal (Link)</a>
+            </div>
+            
+            <div class="canal-item">
+                <h4>Professor Exemplo 2: O Mestre da Álgebra</h4>
+                <p>Especialista em Logaritmos, Matrizes e Análise Combinatória. Aulas detalhadas para quem busca aprofundamento.</p>
+                <a href="#" target="_blank">Acessar Canal (Link)</a>
+            </div>
+        </section>
+        
+      <section class="recursos-relacionados">
+    <h3>Recursos Internos de Matemática</h3>
+
+    <!-- 1️⃣ Gráfico Online -->
+    <div class="grafico-interativo">
+        <h4>📊 Ferramenta Interativa: Gráfico de Funções</h4>
+        <p>Insira os coeficientes "a" e "b" da função f(x) = ax + b:</p>
+        <input type="number" id="a_grafico" placeholder="a">
+        <input type="number" id="b_grafico" placeholder="b">
+        <button onclick="plotarReta()">Plotar Reta</button>
+        <canvas id="canvasGrafico" width="500" height="300" style="background:#fff; border-radius:10px; margin-top:10px;"></canvas>
+    </div>
+
+    <hr>
+
+    <!-- 2️⃣ Formulário para calcular a equação da reta -->
+    <div class="formulario-reta">
+        <h4>📝 Formulário Completo: Determinar Equação da Reta</h4>
+        <p>Insira dois pontos (x₁, y₁) e (x₂, y₂):</p>
+        <input type="number" id="x1" placeholder="x₁">
+        <input type="number" id="y1" placeholder="y₁">
+        <input type="number" id="x2" placeholder="x₂">
+        <input type="number" id="y2" placeholder="y₂">
+        <button onclick="calcularEquacao()">Calcular Equação</button>
+        <p id="resultadoReta"></p>
+    </div>
+</section>
+
+<script>
+/* ===== Plotar Gráfico da Função ===== */
+function plotarReta() {
+    const a = parseFloat(document.getElementById("a_grafico").value);
+    const b = parseFloat(document.getElementById("b_grafico").value);
+    const canvas = document.getElementById("canvasGrafico");
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const centroX = canvas.width / 2;
+    const centroY = canvas.height / 2;
+    const escala = 20; // pixels por unidade
+
+    // Eixos
+    ctx.beginPath();
+    ctx.moveTo(0, centroY);
+    ctx.lineTo(canvas.width, centroY);
+    ctx.moveTo(centroX, 0);
+    ctx.lineTo(centroX, canvas.height);
+    ctx.strokeStyle = "#42282c"; // mesma cor do root
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Plot da reta
+    ctx.beginPath();
+    for(let xPixel = 0; xPixel <= canvas.width; xPixel++) {
+        const x = (xPixel - centroX) / escala;
+        const y = a * x + b;
+        const yPixel = centroY - y * escala;
+        if(xPixel === 0) ctx.moveTo(xPixel, yPixel);
+        else ctx.lineTo(xPixel, yPixel);
+    }
+    ctx.strokeStyle = "#6ca19e"; // cor do root
+    ctx.lineWidth = 2;
+    ctx.stroke();
+}
+
+/* ===== Calcular Equação da Reta a partir de dois pontos ===== */
+function calcularEquacao() {
+    const x1 = parseFloat(document.getElementById("x1").value);
+    const y1 = parseFloat(document.getElementById("y1").value);
+    const x2 = parseFloat(document.getElementById("x2").value);
+    const y2 = parseFloat(document.getElementById("y2").value);
+    const resultado = document.getElementById("resultadoReta");
+
+    if(isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2) || x1 === x2) {
+        resultado.innerHTML = "Por favor, insira valores válidos e x₁ ≠ x₂.";
+        return;
+    }
+
+    const a = (y2 - y1) / (x2 - x1);
+    const b = y1 - a * x1;
+
+    resultado.innerHTML = `Equação da reta: <strong>f(x) = ${a.toFixed(2)}x + ${b.toFixed(2)}</strong>`;
+
+    // Plot da reta no gráfico
+    document.getElementById("a_grafico").value = a;
+    document.getElementById("b_grafico").value = b;
+    plotarReta();
+}
+</script>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

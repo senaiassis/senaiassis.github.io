@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Ciência por Trás da Internet | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+    <style>
+        /* Pequenos estilos locais para os controles interativos (mantêm as cores do site) */
+        .demo-box {
+            background: #fff;
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 5px solid var(--cor2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            margin-top: 12px;
+        }
+        .input-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+        .input-row input[type="text"], .input-row input[type="number"], .input-row select {
+            padding:8px; border-radius:6px; border:1px solid rgba(0,0,0,0.08);
+            min-width:120px;
+        }
+        .btn-send { background:var(--cor5); color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+        .btn-send:hover { background:var(--cor2); }
+        .packets { margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+        .packet {
+            background: linear-gradient(180deg, #ffffff, #f7f7f7);
+            border:1px solid rgba(0,0,0,0.06);
+            padding:8px 10px;
+            border-radius:6px;
+            min-width:90px;
+            max-width:220px;
+            box-shadow:0 2px 4px rgba(0,0,0,0.04);
+            font-family:monospace;
+        }
+        .small { font-size:0.9rem; color:var(--marrom); }
+        .label { font-weight:700; color:var(--marrom); margin-bottom:6px; display:block;}
+        pre { white-space:pre-wrap; word-break:break-word; margin:0; }
+        .result-area { margin-top:12px; padding:10px; background:var(--cor4); border-radius:6px; color:var(--marrom); }
+        @media (max-width:700px){
+            .packet { min-width: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+        <section class="pagina-titulo">
+            <h1>A Ciência por Trás da Internet</h1>
+            <p>Como funcionam os pacotes de dados, os protocolos de comunicação e a segurança cibernética básica.</p>
+        </section>
+
+        <!-- Conceito -->
+        <section class="conteudo-topico">
+            <h3>📡 Como a Internet Transporta Informação</h3>
+            <article>
+                <h4>Pacotes de Dados</h4>
+                <p>
+                    A informação que você envia pela internet (uma mensagem, uma página, um vídeo) é dividida em pequenos blocos chamados <strong>pacotes</strong>.
+                    Cada pacote contém parte do dado e cabeçalhos com informações de controle: endereço de origem e destino, número de sequência, tamanho, e informações para detecção de erro.
+                </p>
+            </article>
+
+            <article>
+                <h4>Por que usar pacotes?</h4>
+                <ul>
+                    <li>Eficiência: links podem ser compartilhados por muitos usuários ao mesmo tempo.</li>
+                    <li>Robustez: se um pacote se perde, só é necessário retransmitir aquele bloco.</li>
+                    <li>Roteamento: pacotes podem seguir caminhos diferentes e ainda assim chegar ao destino, onde são remontados.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Protocolos -->
+        <section class="conteudo-topico">
+            <h3>🔗 Protocolos: Regras que Fazem Tudo Funcionar</h3>
+            <article>
+                <h4>Modelo TCP/IP por camadas (resumido)</h4>
+                <p>
+                    A comunicação é organizada em camadas. Exemplos importantes:
+                    <ul>
+                        <li><strong>Aplicação</strong> — HTTP, DNS, SMTP (o que você vê: páginas, e-mails, pesquisas).</li>
+                        <li><strong>Transporte</strong> — TCP (confiável) e UDP (rápido, sem garantia).</li>
+                        <li><strong>Internet</strong> — IP (endereçamento e roteamento).</li>
+                        <li><strong>Enlace</strong> — Ethernet, Wi-Fi (como os bits são enviados fisicamente).
+                        </li>
+                    </ul>
+                </p>
+            </article>
+
+            <article>
+                <h4>Exemplo: Carregando uma página</h4>
+                <p>
+                    Quando você digita um endereço, seu navegador faz uma requisição HTTP (camada de aplicação) que usa TCP (transporte). O TCP parte os dados em segmentos, IP encapsula em pacotes e cada link físico transmite frames até o servidor responder.
+                </p>
+            </article>
+        </section>
+
+        <!-- Segurança -->
+        <section class="conteudo-topico">
+            <h3>🔒 Segurança Básica na Internet</h3>
+            <article>
+                <h4>Criptografia e TLS</h4>
+                <p>
+                    Para proteger os dados entre você e um serviço (por exemplo, banco ou e-mail) usa-se criptografia. O protocolo TLS (HTTPS) cria um canal seguro usando chaves assimétricas para estabelecer sessão e depois chaves simétricas para velocidade.
+                </p>
+            </article>
+
+            <article>
+                <h4>Autenticação e Firewalls</h4>
+                <p>
+                    Autenticação (senha, 2FA) confirma quem é você. Firewalls e sistemas de detecção ajudam a bloquear tráfego malicioso. Além disso, práticas como atualizar software e usar senhas fortes reduzem riscos.
+                </p>
+            </article>
+        </section>
+
+        <!-- Interativo: Simulador de Pacotes -->
+        <section class="conteudo-topico">
+            <h3>🧪 Simulador: Como os Pacotes Viajam e São Reagrupados</h3>
+            <article>
+                <div class="demo-box">
+                    <label class="label">Mensagem a enviar:</label>
+                    <div class="input-row">
+                        <input type="text" id="msgInput" placeholder="Digite uma pequena mensagem (ex: Olá mundo)">
+                        <label class="small">Tamanho do pacote (caracteres):
+                            <input type="number" id="packetSize" value="8" min="1" style="width:80px;">
+                        </label>
+                        <button class="btn-send" id="sendBtn">Enviar (Simular)</button>
+                    </div>
+
+                    <div id="packetsArea" class="packets" aria-live="polite"></div>
+
+                    <div class="result-area" id="reassembledArea" style="display:none;">
+                        <div class="small"><strong>Reagrupamento:</strong></div>
+                        <pre id="reassembledText"></pre>
+                        <div class="small" id="checksumInfo"></div>
+                    </div>
+                </div>
+
+                <p class="small" style="margin-top:8px;">
+                    O simulador divide o texto em pacotes numerados (como em fragmentação real), calcula um checksum simples por pacote e reagrupa no destino. Experimente alterar o tamanho do pacote.
+                </p>
+            </article>
+        </section>
+
+        <!-- Recursos -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+            <ul>
+                <li><strong>Experiência:</strong> Capture pacotes com ferramentas (Wireshark) — use em redes de teste com permissão.</li>
+                <li><strong>Exercício:</strong> Compare UDP e TCP em aplicações reais (vídeo vs. download de arquivo).</li>
+                <li><strong>Leitura:</strong> RFCs básicos: RFC 791 (IP), RFC 793 (TCP).</li>
+            </ul>
+        </section>
+
+        <!-- Canais -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais</h3>
+            <div class="canal-item">
+                <h4>Canal Trafego de Bits</h4>
+                <p>Boas explicações sobre redes, protocolos e segurança — ideal para estudantes curiosos.</p>
+                <a href="#" target="_blank">Acessar Canal</a>
+            </div>
+            <div class="canal-item">
+                <h4>Curso de Redes (Professor X)</h4>
+                <p>Tutoriais práticos sobre roteadores, TCP/IP e conceitos fundamentais de redes.</p>
+                <a href="#" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script: Simulador de Pacotes + Checksum simples -->
+    <script>
+        function simpleChecksum(text) {
+            // soma dos códigos de caractere mod 256 — exemplo didático simples
+            let sum = 0;
+            for (let i = 0; i < text.length; i++) sum = (sum + text.charCodeAt(i)) % 256;
+            return sum;
+        }
+
+        document.getElementById('sendBtn').addEventListener('click', () => {
+            const msg = document.getElementById('msgInput').value || '';
+            const size = parseInt(document.getElementById('packetSize').value, 10) || 8;
+            const packetsArea = document.getElementById('packetsArea');
+            const reassembledArea = document.getElementById('reassembledArea');
+            const reassembledText = document.getElementById('reassembledText');
+            const checksumInfo = document.getElementById('checksumInfo');
+
+            packetsArea.innerHTML = '';
+            reassembledArea.style.display = 'none';
+            reassembledText.textContent = '';
+            checksumInfo.textContent = '';
+
+            if (msg.length === 0) {
+                packetsArea.innerHTML = '<div class="small">Digite uma mensagem para simular o envio.</div>';
+                return;
+            }
+
+            // dividir em pacotes
+            const packets = [];
+            for (let i = 0; i < msg.length; i += size) {
+                const chunk = msg.slice(i, i + size);
+                packets.push({
+                    index: Math.floor(i / size) + 1,
+                    data: chunk,
+                    checksum: simpleChecksum(chunk)
+                });
+            }
+
+            // mostrar pacotes (simulação de envio)
+            packets.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'packet';
+                div.innerHTML = '<div class="small"><strong>Pacote #' + p.index + '</strong></div>' +
+                                '<div class="small">tam: ' + p.data.length + '</div>' +
+                                '<pre>' + p.data + '</pre>' +
+                                '<div class="small">chk: ' + p.checksum + '</div>';
+                packetsArea.appendChild(div);
+            });
+
+            // simular tempo/transmissão: reagrupa após curto delay na ordem (mesmo que na prática possam chegar fora de ordem)
+            setTimeout(() => {
+                // reagrupando
+                const joined = packets.map(p => p.data).join('');
+                reassembledText.textContent = joined;
+                checksumInfo.textContent = 'Checksum total (simples): ' + simpleChecksum(joined);
+                reassembledArea.style.display = 'block';
+            }, 600);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade Média | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+            
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Velocidade Média: O Básico para Começar</h1>
+            <p>Entenda o conceito de velocidade, como calcular e por que ela é considerada uma grandeza relativa.</p>
+        </section>
+
+        <!-- 🧭 Conceito -->
+        <section class="conteudo-topico">
+            <h3>🧭 O que é Velocidade?</h3>
+            <article>
+                <h4>Definição Simples</h4>
+                <p>A <strong>velocidade</strong> indica o quão rápido um corpo se desloca em um determinado intervalo de tempo. Ela mostra a relação entre o espaço percorrido e o tempo gasto.</p>
+                <p>Em linguagem simples, se você anda mais rápido, sua velocidade é maior. Se demora mais para percorrer o mesmo caminho, sua velocidade é menor.</p>
+            </article>
+
+            <article>
+                <h4>Fórmula da Velocidade Média</h4>
+                <p>A fórmula usada para calcular a velocidade média é:</p>
+                <p style="text-align:center; font-size:1.3em;"><strong>Vm = ΔS / Δt</strong></p>
+                <p>Onde:</p>
+                <ul>
+                    <li><strong>Vm</strong> = velocidade média</li>
+                    <li><strong>ΔS</strong> = variação do espaço (distância percorrida)</li>
+                    <li><strong>Δt</strong> = variação do tempo (tempo gasto)</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 💡 Exemplos -->
+        <section class="conteudo-topico">
+            <h3>💡 Exemplo Prático</h3>
+            <article>
+                <p>Imagine que um carro percorre 180 km em 3 horas. Aplicando a fórmula:</p>
+                <p style="text-align:center; font-size:1.2em;"><strong>Vm = 180 / 3 = 60 km/h</strong></p>
+                <p>Ou seja, a velocidade média do carro foi de <strong>60 km/h</strong>.</p>
+            </article>
+
+            <article>
+                <h4>🧠 Velocidade é Relativa</h4>
+                <p>A velocidade depende do ponto de vista do observador. Por exemplo, dentro de um avião em voo, você pode estar parado em relação ao assento, mas em movimento rápido em relação ao solo.</p>
+            </article>
+        </section>
+
+        <!-- ⚙️ Calculadora -->
+        <section class="conteudo-topico">
+            <h3>⚙️ Calculadora de Velocidade Média</h3>
+            <div class="calculadora">
+                <p>Insira os valores abaixo:</p>
+                <input type="number" id="espaco" placeholder="Distância (km)">
+                <input type="number" id="tempo" placeholder="Tempo (h)">
+                <button onclick="calcularVelocidade()">Calcular</button>
+                <p id="resultado"></p>
+            </div>
+        </section>
+
+        <!-- 🔗 Recursos -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Atividades</h3>
+            <ul>
+                <li><strong>Simulador de Movimento:</strong> Veja como a velocidade muda em diferentes trajetórias.</li>
+                <li><strong>Quiz Interativo:</strong> Teste seus conhecimentos sobre movimento uniforme e variações de velocidade.</li>
+                <li><strong>Experimento Caseiro:</strong> Meça a velocidade de um carrinho de brinquedo!</li>
+            </ul>
+        </section>
+
+        <!-- 📺 Canais -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Física</h3>
+
+            <div class="canal-item">
+                <h4>Física Total</h4>
+                <p>Explicações curtas e claras sobre movimento retilíneo uniforme e velocidade média.</p>
+                <a href="https://www.youtube.com/@FisicaTotal" target="_blank">Acessar Canal</a>
+            </div>
+
+            <div class="canal-item">
+                <h4>Curso Enem Gratuito</h4>
+                <p>Aulas completas de Cinemática com exercícios resolvidos e dicas de vestibular.</p>
+                <a href="https://www.youtube.com/@CursoEnemGratuito" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- 📜 Script -->
+    <script>
+        function calcularVelocidade() {
+            const espaco = parseFloat(document.getElementById("espaco").value);
+            const tempo = parseFloat(document.getElementById("tempo").value);
+            const resultado = document.getElementById("resultado");
+
+            if (tempo <= 0 || isNaN(espaco) || isNaN(tempo)) {
+                resultado.innerHTML = "⚠️ Preencha corretamente os campos (tempo deve ser maior que 0).";
+                return;
+            }
+
+            const velocidade = espaco / tempo;
+            resultado.innerHTML = `🚗 A velocidade média é <strong>${velocidade.toFixed(2)} km/h</strong>.`;
+        }
+    </script>
+
+</body>
+</html>

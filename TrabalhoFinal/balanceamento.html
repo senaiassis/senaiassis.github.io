@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanceamento e Leis Ponderais | Ciência Fácil</title>
+    <link rel="stylesheet" href="2grau.css">
+    <link rel="icon" href="assets/EDUCA (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container-menu">
+            <div class="logo">
+                <a href="index.html">Ciência Fácil</a>
+            </div>
+
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="fisica.html">Física</a>
+                <a href="quimica.html">Química</a>
+                <a href="biologia.html">Biologia</a>
+                <a href="experimentos.html">Experimentos</a>
+                <a href="astronomia.html">Astronomia</a>
+                <a href="matematica.html">Matemática</a>
+                <a href="tecnologia.html">Tecnologia</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="parcerias.html">Parcerias</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-principal-conteudo">
+
+        <section class="pagina-titulo">
+            <h1>Balanceamento e Leis Ponderais</h1>
+            <p>Aprenda a balancear equações químicas e aplicar as Leis de Lavoisier e Proust para previsões precisas.</p>
+        </section>
+
+        <!-- 📘 Tópico 1 -->
+        <section class="conteudo-topico">
+            <h3>⚖️ O Que é Balanceamento Químico?</h3>
+            <article>
+                <p>
+                    O <strong>balanceamento de equações químicas</strong> garante que o número de átomos de cada elemento seja igual nos reagentes e produtos, respeitando a <strong>Lei da Conservação da Massa</strong>.
+                </p>
+                <p>Exemplo simples:</p>
+                <ul>
+                    <li>Equação não balanceada: H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</li>
+                    <li>Equação balanceada: 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>📏 Leis Ponderais</h4>
+                <p>
+                    - <strong>Lei de Lavoisier (Conservação da Massa)</strong>: A massa total dos reagentes é igual à massa total dos produtos.<br>
+                    - <strong>Lei de Proust (Proporções Definidas)</strong>: Um composto químico sempre contém os mesmos elementos na mesma proporção em massa, independentemente da origem.
+                </p>
+            </article>
+        </section>
+
+        <!-- 🔬 Tópico 2 -->
+        <section class="conteudo-topico">
+            <h3>💡 Exemplos de Aplicação</h3>
+
+            <article>
+                <h4>Exemplo 1: Combustão do Metano</h4>
+                <p>Equação não balanceada: CH<sub>4</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</p>
+                <p>Balanceando: CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O</p>
+            </article>
+
+            <article>
+                <h4>Exemplo 2: Formação da Água</h4>
+                <p>Equação não balanceada: H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</p>
+                <p>Balanceando: 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O</p>
+            </article>
+        </section>
+
+        <!-- 🧮 Ferramenta Interativa -->
+        <section class="conteudo-topico">
+            <h3>💻 Simulador de Balanceamento</h3>
+            <p>Escolha uma reação simples e veja o balanceamento automático:</p>
+            <div class="calculadora">
+                <select id="reacao">
+                    <option value="">Selecione...</option>
+                    <option value="H2O">Formação da Água: H2 + O2 → H2O</option>
+                    <option value="CH4">Combustão do Metano: CH4 + O2 → CO2 + H2O</option>
+                </select>
+                <button onclick="balancearReacao()">Balancear</button>
+                <p id="resultadoBalanco"></p>
+            </div>
+        </section>
+
+        <!-- 🔗 Recursos -->
+        <section class="recursos-relacionados">
+            <h3>Recursos e Exercícios</h3>
+            <ul>
+                <li>Exercícios de balanceamento de equações químicas.</li>
+                <li>Explicações detalhadas das Leis de Lavoisier e Proust.</li>
+                <li>Simuladores interativos para praticar em casa.</li>
+            </ul>
+        </section>
+
+        <!-- 📺 Canais -->
+        <section class="recomendacoes-externas">
+            <h3>Recomendações de Canais de Química</h3>
+
+            <div class="canal-item">
+                <h4>Manual do Mundo</h4>
+                <p>Experimentos e demonstrações de química com explicações claras sobre leis e reações.</p>
+                <a href="https://www.youtube.com/@manualdomundo" target="_blank">Acessar Canal</a>
+            </div>
+
+            <div class="canal-item">
+                <h4>Química em Ação</h4>
+                <p>Canal educativo com exemplos práticos de balanceamento e leis ponderais.</p>
+                <a href="https://www.youtube.com/@QuimicaEmAcao" target="_blank">Acessar Canal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ciência Fácil | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function balancearReacao() {
+            const reacao = document.getElementById("reacao").value;
+            const resultado = document.getElementById("resultadoBalanco");
+            let balanco = "";
+
+            switch(reacao) {
+                case "H2O":
+                    balanco = "2H₂ + O₂ → 2H₂O";
+                    break;
+                case "CH4":
+                    balanco = "CH₄ + 2O₂ → CO₂ + 2H₂O";
+                    break;
+                default:
+                    resultado.innerHTML = "Selecione uma reação válida.";
+                    return;
+            }
+
+            resultado.innerHTML = `<strong>Equação Balanceada:</strong> ${balanco}`;
+        }
+    </script>
+
+</body>
+</html>

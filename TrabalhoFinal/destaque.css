@@ -1,0 +1,121 @@
+/* ================================================== */
+/* CSS ESPECÍFICO PARA A PÁGINA DE DESTAQUE (REPORTAGEM) */
+/* Depende das variáveis definidas no index.css (:root) */
+/* ================================================== */
+
+/* 1. ESTILO DE PÁGINA ATIVA NO HEADER (Destaque 'Início') */
+.menu-links a[href="index.html"] {
+    color: var(--cor4); 
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* Layout Geral do Artigo */
+.layout-artigo {
+    max-width: 850px; /* Largura confortável para leitura */
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.reportagem-completa {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Título da Reportagem */
+.titulo-reportagem {
+    border-bottom: 3px solid var(--cor5);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.titulo-reportagem h1 {
+    font-size: 2.5em;
+    color: var(--marrom);
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: var(--marrom);
+    margin-top: 10px;
+}
+
+.meta-info {
+    font-size: 0.85em;
+    color: var(--marrom);
+    padding-top: 10px;
+}
+
+/* Estilos de Seção Interna */
+.introducao, .exemplo-pratico, .conclusao {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--cor4);
+}
+
+.introducao h2, .exemplo-pratico h2, .conclusao h2 {
+    font-size: 1.8em;
+    color: var(--cor5);
+    margin-top: 0; /* Remove margem extra para títulos de seção */
+    margin-bottom: 15px;
+}
+
+/* Conteúdo com duas colunas (Newton vs Einstein) */
+.conteudo-duplo {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.texto-bloco {
+    flex: 1;
+    padding: 15px;
+    border-left: 3px solid var(--cor2);
+    background-color: #f9f9f9;
+}
+
+.texto-bloco h3 {
+    color: var(--marrom);
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Caixa de Destaque/Alerta */
+.alerta-ciencifacil {
+    background-color: var(--cor4); /* Cor clara/bege */
+    color: var(--marrom);
+    border-left: 5px solid var(--cor5);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alerta-ciencifacil a {
+    color: var(--marrom);
+    text-decoration: underline;
+}
+
+/* Conclusão */
+.conclusao p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+/* --- ESTILIZAÇÃO DO RODAPÉ PADRÃO --- */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
