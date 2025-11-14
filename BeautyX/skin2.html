@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detalhes do Produto — L'Oréal Paris</title>
+  <meta name="description" content="Saiba mais sobre os produtos L'Oréal Paris e descubra o ideal para você." />
+  <link rel="stylesheet" href="css/skinGeral.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">L'Oréal Lab</a>
+    <nav class="nav-menu">
+        <a href="index.html">Inicío</a>
+        <a href="historia.html">História</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sustainability.html">Sustentabilidade</a>
+        <a href="dicasdebeleza.html">Dicas de Beleza</a>
+         <a href="contato.html">Contato</a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="product-detail">
+      <!-- imagem -->
+      <div class="product-image">
+        <img id="productImage" src="/skincare.img/imagem3.png" alt="Produto L'Oréal Paris">
+      </div>
+
+      <!-- detalhes -->
+      <div class="product-info">
+        <h1 id="productName">Revitalift Laser L’Oréal</h1>
+        <p id="productDesc">
+         O Sérum Revitalift Laser é desenvolvido em instalações de alta precisão onde ingredientes potentes como o retinol puro são protegidos por tecnologia patenteada para manter sua estabilidade. Cada lote passa por testes rigorosos que avaliam desde a absorção rápida até a resistência da fórmula à degradação, garantindo eficácia e segurança para pele madura.
+        </p>
+
+        <h3>Benefícios</h3>
+        <ul id="productBenefits">
+          <li>Redução visível de rugas, incluindo profundas</li>
+          <li>Textura da pele mais fina e tom mais uniforme</li>
+          <li>Aspecto mais firme e luminoso da pele</li>
+        </ul>
+
+        <h3>Por Dentro da Fórmula</h3>
+        <ul id="productBenefits">
+          <li>Retinol puro – ativo dermatológico eficaz contra sinais de envelhecimento.</li>
+          <li>Tecnologia estabilizadora – protege o retinol da degradação para manter a potência.</li>
+          <li>Textura leve e rápida absorção – facilita o uso noturno e complementa rotina de cuidados.</li>
+        </ul>
+
+        <p id="productPrice" class="price"></p>
+
+        <a href="https://www.loreal-paris.com.br" target="_blank" class="btn">Comprar agora</a>
+      </div>
+    </section>
+
+    <!-- relacionados -->
+    <section class="related">
+      <h2>Você também pode gostar</h2>
+      <div class="related-grid">
+        <article class="related-item">
+          <img src="/makeup.img/imagem3.png" alt="Outro produto">
+          <h3>Máscara Lash Paradise</h3>
+          <p>Com tecnologia de alongamento e volume, realça os cílios para um olhar marcante e duradouro.</p>
+          <a href="make2.html" class="btn">Ver detalhes</a>
+        </article>
+
+        <article class="related-item">
+          <img src="/makeup.img/imagem5.png" alt="Outro produto">
+          <h3>Elseve Reparação Total 5</h3>
+          <p>Shampoo e Condicionador de Reparação L’Oréal: nutrem, fortalecem e restauram cabelos danificados, deixando-os macios, brilhantes e cheios de vida.</p>
+          <a href="make4.html" class="btn">Ver detalhes</a>
+        </article>
+
+        <article class="related-item">
+          <img src="/makeup.img/imagem6.png" alt="Outro produto">
+          <h3>Revitalift Hialurônico</h3>
+          <p>formulado com ácido hialurônico de alta performance, vitaminas e ativos hidratantes, proporciona hidratação profunda, suaviza linhas finas e ajuda a firmar a pele. Sua composição rica nutre, revitaliza e deixa a pele luminosa, macia e com aparência visivelmente mais jovem.</p>
+          <a href="make5.html" class="btn">Ver detalhes</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>L'Oréal Paris</h4>
+        <p>Porque você vale muito.</p>
+      </div>
+
+      <div>
+        <h5>Categorias</h5>
+        <ul>
+          <li><a href="makeup.html">Maquiagem</a></li>
+          <li><a href="cabelo.html">Cabelos</a></li>
+          <li><a href="skincare.html">Skincare</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Suporte</h5>
+        <ul>
+          <li><a href="https://www-lorealparisusa-com.translate.goog/contact-us?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© <span id="year"></span> L'Oréal Paris — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Exemplo simples: carregar produto pelo ID
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id === '20') {
+      document.getElementById('productName').textContent = "Base Infallible 24H Fresh Wear";
+      document.getElementById('productDesc').textContent = "Base de longa duração com textura leve e cobertura impecável. Ideal para todos os tipos de pele.";
+      document.getElementById('productImage').src = "assets/images/makeup1.jpg";
+      document.getElementById('productPrice').textContent = "R$ 89,90";
+    }
+  </script>
+
+</body>
+</html>

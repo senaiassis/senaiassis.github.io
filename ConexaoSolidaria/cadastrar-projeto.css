@@ -1,0 +1,122 @@
+/* ========================================================= */
+/* cadastro.css - Estilos Específicos para Cadastro de Projeto */
+/* Requer a inclusão de style.css e, opcionalmente, contato.css para base de inputs. */
+/* ========================================================= */
+
+/* Introdução ao Cadastro */
+.intro-cadastro {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--principal-escuro); /* Fundo Roxo */
+    color: white;
+    border-bottom: 5px solid var(--principal-medio);
+}
+
+.intro-cadastro h1 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.intro-cadastro p {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--secundario-claro);
+}
+
+/* Container do Formulário Principal */
+.form-projeto-container {
+    padding: 60px 0;
+    max-width: 900px; /* Maior largura para formulário extenso */
+    margin: 0 auto;
+}
+
+/* Títulos de Seção dentro do Formulário */
+.secao-titulo {
+    color: var(--principal-escuro); 
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--principal-medio); /* Linha vibrante lateral */
+    padding-left: 15px;
+}
+
+.secao-titulo i {
+    color: var(--principal-medio);
+    margin-right: 10px;
+}
+
+/* Estilo para a área de Checklist/Pré-requisitos */
+.requisitos-lista {
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: var(--secundario-claro);
+    border-radius: 8px;
+    border: 1px solid rgba(76, 30, 79, 0.1);
+}
+
+.requisitos-lista li {
+    margin-bottom: 10px;
+    color: var(--principal-escuro);
+    font-weight: 500;
+}
+
+.requisitos-lista li i {
+    color: var(--sucesso); /* Verde Água para "Check" */
+    margin-right: 10px;
+}
+
+/* Layout de Duas Colunas dentro do Formulário */
+.form-duas-colunas {
+    display: flex;
+    gap: 25px;
+}
+
+.coluna-50 {
+    flex: 1; 
+}
+
+/* Estilo para uploads de arquivo */
+.form-group input[type="file"] {
+    border: 1px dashed var(--principal-escuro);
+    padding: 10px;
+    background-color: var(--secundario-claro);
+}
+
+/* Estilo para a área de Termos (Reutiliza termos-e-consentimento) */
+
+/* Botão de Envio */
+.btn-cadastrar-projeto {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    width: 100%;
+    /* Usa a cor Secundária de Alerta/Apoio para o CTA do projeto */
+    background-color: var(--alerta);
+    box-shadow: 0 6px 15px rgba(231, 111, 81, 0.4);
+    color: white !important;
+}
+
+.btn-cadastrar-projeto:hover {
+    background-color: #D65A42;
+    box-shadow: 0 8px 20px rgba(231, 111, 81, 0.6);
+}
+
+/* Reutilizando estilos de input do contato.css */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group label::after {
+    content: ' *';
+    color: var(--alerta);
+}

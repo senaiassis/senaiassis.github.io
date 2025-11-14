@@ -1,0 +1,234 @@
+:root {
+	--rosa-escuro: #c00163;
+	--rosa: #d0227a;
+	--rosa-médio: #e04392;
+	--rosa-médio1: #ef63a9;
+	--rosa-claro: #ff84c0;
+	--marrom: #8d7966;
+	--cinza: #a8a39d;
+	--bege: #d8c8b8;
+	--cinza-claro: #e2ddd9;
+	--Off-White: #f8f1e9;
+}
+
+/* GERAL */
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: var(--Off-White);
+	color: var(--marrom);
+	margin: 0;
+	padding: 0;
+}
+
+/* NAVBAR */
+.tm-nav {
+	background-color: var(--rosa-médio);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	z-index: 100;
+}
+
+.tm-nav-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 15px 20px;
+}
+
+.tm-site-name {
+	font-size: 26px;
+	font-weight: 700;
+	color: white;
+}
+
+.tm-nav-links ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.tm-nav-links li {
+	margin-left: 20px;
+}
+
+.tm-nav-links a {
+	color: var(--Off-White);
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s;
+}
+
+.tm-nav-links a:hover {
+	color: var(--rosa-claro);
+}
+
+/* HERO */
+.tm-hero {
+	background: linear-gradient(
+		to right,
+		var(--rosa-claro),
+		var(--rosa-médio1)
+	);
+	color: white;
+	text-align: center;
+	padding: 160px 20px 120px;
+	margin-top: 70px;
+}
+
+.tm-hero h2 {
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.tm-hero p {
+	max-width: 750px;
+	margin: 0 auto 25px;
+	line-height: 1.6;
+	font-size: 18px;
+}
+
+.tm-btn {
+	background-color: var(--rosa-escuro);
+	color: white;
+	padding: 10px 25px;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.3s;
+}
+
+.tm-btn:hover {
+	background-color: var(--rosa);
+}
+
+/* SEÇÕES */
+.tm-section {
+	background-color: var(--Off-White);
+	padding: 80px 20px;
+	text-align: center;
+}
+
+.tm-section-alt {
+	background-color: var(--cinza-claro);
+}
+
+.tm-section-title {
+	color: var(--rosa);
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+.tm-section-text {
+	max-width: 800px;
+	margin: 0 auto 40px;
+	font-size: 17px;
+	line-height: 1.7;
+	color: var(--marrom);
+}
+
+/* BOXES */
+.tm-3-col-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 25px;
+}
+
+.tm-box {
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	padding: 25px;
+	width: 300px;
+	transition: 0.3s;
+}
+
+.tm-box:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.tm-emoji {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.tm-box h3 {
+	color: var(--rosa-escuro);
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+/* CURIOSIDADES */
+.tm-curiosidades {
+	list-style: none;
+	padding: 0;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 17px;
+	line-height: 1.8;
+}
+
+.tm-curiosidades li {
+	margin: 8px 0;
+}
+
+/* FORMULÁRIO */
+.tm-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.tm-form input,
+.tm-form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid var(--cinza);
+	border-radius: 6px;
+	font-family: inherit;
+}
+
+.tm-form textarea {
+	min-height: 120px;
+}
+
+.tm-form button {
+	background-color: var(--rosa);
+	color: white;
+	padding: 10px 25px;
+	border: none;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.tm-form button:hover {
+	background-color: var(--rosa-médio);
+}
+
+/* RODAPÉ */
+.tm-footer {
+	background-color: var(--rosa-escuro);
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+	.tm-3-col-container {
+		flex-direction: column;
+		align-items: center;
+	}
+}

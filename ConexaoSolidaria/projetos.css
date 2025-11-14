@@ -1,0 +1,159 @@
+/* ========================================================= */
+/* projetos.css - Estilos Específicos para a Página de Projetos */
+/* Requer a inclusão de style.css primeiro. */
+/* ========================================================= */
+
+/* Container de Filtros/Categorias */
+.filtros-container {
+    padding: 30px 0;
+    background-color: var(--secundario-claro);
+    border-bottom: 3px solid var(--principal-escuro);
+}
+
+.filtros-lista {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.filtro-item {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filtro-item:hover, .filtro-item.ativo {
+    background-color: var(--principal-escuro);
+    color: white;
+}
+
+.filtro-item i {
+    margin-right: 8px;
+    color: var(--principal-medio); /* Ícone vibrante */
+    transition: color 0.3s;
+}
+
+.filtro-item:hover i, .filtro-item.ativo i {
+    color: var(--principal-medio); /* Mantém o amarelo vibrante para contraste com o roxo */
+}
+
+/* ===== Grid de Cards de Projetos ===== */
+.projetos-grid-container {
+    padding: 60px 0;
+}
+
+.projetos-grid {
+    display: grid;
+    /* 3 colunas por linha */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+}
+
+.card-projeto {
+    background-color: var(--corpo-fundo);
+    border-radius: 12px;
+    overflow: hidden; /* Garante que a imagem se encaixe */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(76, 30, 79, 0.2);
+}
+
+.card-imagem {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    background-color: var(--secundario-claro);
+    /* Simulação de imagem - REMOVER QUANDO USAR IMAGENS REAIS */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--principal-escuro);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    font-size: 1.6rem;
+    color: var(--principal-escuro);
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 70px; /* Ajuda a manter o card uniforme */
+}
+
+.card-detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tag-causa {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--principal-escuro);
+    background-color: var(--principal-medio); /* Destaque vibrante */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Botão de Saiba Mais - Estilo Pequeno */
+.btn-saiba-mais {
+    color: var(--principal-escuro) !important;
+    font-weight: 700;
+    border: 2px solid var(--principal-escuro);
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: var(--principal-escuro);
+    color: white !important;
+}
+
+/* Estilo para a seção "Cadastre o seu projeto" */
+.cta-projeto {
+    text-align: center;
+    padding: 80px 0;
+    background-color: var(--principal-escuro);
+    color: white;
+}
+
+.cta-projeto h2 {
+    color: var(--principal-medio);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-projeto p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--secundario-claro);
+}
+
+.btn-cta-projeto {
+    background-color: var(--principal-medio);
+    color: var(--principal-escuro) !important;
+    /* Reutiliza o estilo do botão principal global */
+    
+}

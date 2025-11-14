@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco | Conexão Solidária</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container menu-flex">
+            <div class="logo">CS</div> 
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="missoesevalores.html">Missão & Valores</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="voluntarios.html">Seja Voluntário</a>
+                <a href="contato.html" style="color: var(--principal-medio);">Fale Conosco</a> </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="intro-guia" style="background-color: var(--corpo-fundo); border-bottom: 1px solid #eee;">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h1>Estamos Aqui para Ajudar Você</h1>
+                </div>
+                <p>
+                    Seja para dúvidas sobre voluntariado, suporte a projetos ou parcerias, escolha a melhor forma de entrar em contato.
+                </p>
+            </div>
+        </section>
+
+        <section class="contato-principal">
+            <div class="container contato-layout">
+                
+                <div class="contato-formulario">
+                    <h2>Envie-nos uma Mensagem</h2>
+                    
+                    <form action="agradecimento-contato.html" method="POST">
+                        
+                        <div class="form-group">
+                            <label for="nome">Seu Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Ex: Maria da Silva">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Seu Email</label>
+                            <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione o motivo do contato</option>
+                                <option value="voluntario">Dúvidas sobre Voluntariado</option>
+                                <option value="projeto">Suporte/Cadastro de Projeto</option>
+                                <option value="parceria">Parcerias/Imprensa</option>
+                                <option value="outros">Outros Assuntos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Sua Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" required placeholder="Descreva sua solicitação aqui..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-principal btn-enviar">
+                            <i class="fas fa-paper-plane"><link rel="stylesheet" href="agradecimento-contato.html"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contato-info">
+                    <h3>Canais de Atendimento</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Geral/Dúvidas:</span><br>
+                            <a href="mailto:contato@conexaosolidaria.org">contato@conexaosolidaria.org</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-hands-helping"></i>
+                        <div>
+                            <span>Suporte a Projetos:</span><br>
+                            <a href="mailto:projetos@conexaosolidaria.org">projetos@conexaosolidaria.org</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>Telefone (Seg-Sex, 9h-17h):</span><br>
+                            <span>(XX) 99999-9999</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 40px;">Nossas Redes</h3>
+                    <div style="display: flex; gap: 20px; justify-content: center;">
+                        <a href="#" style="color: var(--principal-escuro);"><i class="fab fa-instagram" style="font-size: 2.5rem;"></i></a>
+                        <a href="#" style="color: var(--principal-escuro);"><i class="fab fa-facebook-square" style="font-size: 2.5rem;"></i></a>
+                        <a href="#" style="color: var(--principal-escuro);"><i class="fab fa-linkedin" style="font-size: 2.5rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Conexão Solidária. Todos os direitos reservados.</p>
+            <div>
+                <a href="missoes.html">Sobre Nós</a> | 
+                <a href="contato.html">Fale Conosco</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

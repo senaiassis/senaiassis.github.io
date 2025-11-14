@@ -1,0 +1,115 @@
+/* ========================================================= */
+/* contato.css - Estilos Específicos para Fale Conosco */
+/* Requer a inclusão de style.css primeiro. */
+/* ========================================================= */
+
+/* Container Principal de Contato (Layout de 2 Colunas) */
+.contato-layout {
+    display: flex;
+    gap: 40px;
+    padding: 60px 0;
+    align-items: flex-start; /* Alinha o topo das colunas */
+}
+
+/* Coluna do Formulário */
+.contato-formulario {
+    flex: 2; /* Ocupa mais espaço (2/3) */
+    background-color: var(--secundario-claro);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contato-formulario h2 {
+    color: var(--principal-escuro);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--principal-medio);
+    padding-left: 15px;
+}
+
+/* Estilo dos Grupos de Input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--principal-escuro);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--principal-medio); /* Borda na cor vibrante no foco */
+    box-shadow: 0 0 0 3px rgba(255, 195, 0, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Botão de Envio */
+.btn-enviar {
+    /* Reutilizando a classe do botão principal para o estilo pílula vibrante */
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+/* Coluna de Informações Adicionais */
+.contato-info {
+    flex: 1; /* Ocupa 1/3 do espaço */
+    padding: 20px;
+    background-color: var(--corpo-fundo);
+    border-left: 2px dashed var(--secundario-claro);
+}
+
+.contato-info h3 {
+    color: var(--principal-escuro);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--principal-medio);
+    padding-bottom: 5px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: var(--principal-medio);
+    margin-right: 15px;
+    background-color: var(--principal-escuro);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+.info-item span, .info-item a {
+    color: var(--texto-base);
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}

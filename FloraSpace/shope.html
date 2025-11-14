@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloraSpace - Shop</title>
+    <link rel="stylesheet" href="shope.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; list-style: none; color:  #ff84c0;">FloraSpace</a></h1>
+        <nav>
+            <ul>
+                <li><a href="shope.html">Início</a></li>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#plantas-interior">Plantas de Interior</a></li>
+                <li><a href="#plantas-exterior">Plantas de Exterior</a></li>
+                <li><a href="#vasos-acessorios">Vasos e Acessórios</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="Suporte.html" class="nav-cta">Contato</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Novidades -->
+        <section id="novidades">
+            <h2>Novidades</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/imagem17.jpg" alt="Suculenta Rosa">
+                    <h3>Suculenta Rosa</h3>
+                    <p>Pequena e delicada, perfeita para qualquer cantinho.</p>
+                    <p class="preco">R$ 25,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="images/imagem18.jpg" alt="Arranjo Tropical">
+                    <h3>Arranjo Tropical</h3>
+                    <p>Arranjo vibrante e colorido para alegrar seu ambiente.</p>
+                    <p class="preco">R$ 80,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plantas de Interior -->
+        <section id="plantas-interior">
+            <h2>Plantas de Interior</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/imagem19.jpg" alt="Monstera">
+                    <h3>Monstera</h3>
+                    <p>Uma planta exuberante, perfeita para salas e escritórios.</p>
+                    <p class="preco">R$ 120,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="images/imagem20.jpg" alt="Jiboia">
+                    <h3>Jiboia</h3>
+                    <p>Trepadeira elegante, fácil de cuidar e resistente.</p>
+                    <p class="preco">R$ 60,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plantas de Exterior -->
+        <section id="plantas-exterior">
+            <h2>Plantas de Exterior</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/imagem21.jpg" alt="Rosa de Jardim">
+                    <h3>Rosa de Jardim</h3>
+                    <p>Clássica e perfumada, perfeita para jardins ensolarados.</p>
+                    <p class="preco">R$ 40,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="images/imagem22.jpg" alt="Lavanda">
+                    <h3>Lavanda</h3>
+                    <p>Além de perfumada, atrai abelhas e borboletas.</p>
+                    <p class="preco">R$ 35,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vasos e Acessórios -->
+        <section id="vasos-acessorios">
+            <h2>Vasos e Acessórios</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/imagem23.jpg" alt="Vaso de Cerâmica">
+                    <h3>Vaso de Cerâmica</h3>
+                    <p>Elegante e resistente, ideal para qualquer planta.</p>
+                    <p class="preco">R$ 50,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="images/imagem24.jpg" alt="Luminária Decorativa">
+                    <h3>Luminária Decorativa</h3>
+                    <p>Perfeita para iluminar suas plantas e seu ambiente.</p>
+                    <p class="preco">R$ 70,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promoções -->
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="images/imagem25.jpg" alt="Suculenta Promoção">
+                    <h3>Suculenta em Promoção</h3>
+                    <p>Leve 3, pague 2! Pequenas e adoráveis.</p>
+                    <p class="preco">R$ 20,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+                <div class="card">
+                    <img src="images/imagem26.jpg" alt="Arranjo em Desconto">
+                    <h3>Arranjo Especial</h3>
+                    <p>Arranjo colorido com desconto especial desta semana.</p>
+                    <p class="preco">R$ 60,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll('.btn-comprar');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                botao.textContent = 'Comprado';
+                botao.classList.add('comprado');
+                botao.disabled = true;
+            });
+        });
+    </script>
+</body>
+</html>

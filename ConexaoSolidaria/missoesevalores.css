@@ -1,0 +1,102 @@
+/* ========================================================= */
+/* missoes.css - Estilos Específicos para Missão e Valores */
+/* Requer a inclusão de style.css primeiro. */
+/* ========================================================= */
+
+/* Área de Missão (Geral) */
+.missao-geral {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--corpo-fundo);
+}
+
+.missao-geral p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #444;
+}
+
+/* ===== Seção de Valores (Grid de Cards) ===== */
+.valores-container {
+    padding: 60px 0;
+    background-color: var(--secundario-claro); /* Fundo claro para destacar os cards */
+}
+
+.grid-valores {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se houver muitos cards */
+    justify-content: space-between;
+    gap: 30px; /* Espaço entre os cards */
+}
+
+.card-valor {
+    flex-basis: calc(33.333% - 20px); /* 3 cards por linha (ajustado pelo gap) */
+    background-color: var(--corpo-fundo);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-valor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(76, 30, 79, 0.15); /* Sombra mais intensa */
+}
+
+/* Ícones dos Valores */
+.card-valor i {
+    font-size: 3rem;
+    color: var(--principal-medio); /* Cor vibrante para o ícone */
+    background-color: var(--principal-escuro); /* Fundo do ícone para alto contraste */
+    color: white; /* Ícone branco no fundo roxo */
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card-valor h3 {
+    font-size: 1.5rem;
+    color: var(--principal-escuro);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-valor p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Seção de Visão */
+.visao-futuro {
+    padding: 60px 0;
+    background-color: var(--corpo-fundo);
+}
+
+.visao-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    border: 2px solid var(--principal-medio); /* Borda de destaque */
+    border-radius: 12px;
+}
+
+.visao-texto h2 {
+    font-size: 2rem;
+    color: var(--principal-medio);
+}
+
+.visao-texto p {
+    font-size: 1.1rem;
+    color: var(--texto-base);
+}
+
+.visao-icone i {
+    font-size: 5rem;
+    color: var(--principal-escuro);
+}

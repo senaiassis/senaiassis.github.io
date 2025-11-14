@@ -1,0 +1,240 @@
+/* ----------- GERAL ----------- */
+   :root{
+    --vinho: #680e34;
+    --vinho-medio:#690202;
+    --vermelho: #7C0A01;
+    --bege:#e6ddbc; 
+    --roxo:#280904;
+    --cinza:#e0e0e0;
+    --vermelho-claro--:#fb8f8f;
+   }
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--cinza);
+  
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ----------- HEADER ----------- */
+.site-header {
+  background: var(--vermelho);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cinza);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--cinza);
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  transition: 1.0s;
+  font-size: 19px;
+  
+}
+
+.btn {
+  background-color: var(--cinza);
+  color: #020202;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  color: #d21c1c;
+  font-weight: 600;
+}
+
+/* ----------- CONTEÚDO ----------- */
+.intro {
+  text-align: center;
+  margin: 4rem 0 3rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+/* ----------- FORMULÁRIO ----------- */
+.form-card {
+  background: var(--vermelho);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  display: flex;
+  margin-right: 50px;
+ 
+
+}
+
+.form-card label {
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--cinza);
+  
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #0b0b0b;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+/* ----------- INFORMAÇÕES ----------- */
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.social h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.icons a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.icons a:hover {
+  color: #000;
+}
+
+/* ----------- FOOTER ----------- */
+.site-footer {
+  background: #e0e0e0;
+  border-top: 1px solid #eee;
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-grid h4,
+.footer-grid h5 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-grid p,
+.footer-grid a {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.footer-grid a {
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ----------- RESPONSIVO ----------- */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .contact-grid {
+    gap: 1.5rem;
+  }
+}
+

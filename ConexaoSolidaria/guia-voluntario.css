@@ -1,0 +1,139 @@
+/* ========================================================= */
+/* guia.css - Estilos Específicos para Guia do Voluntário */
+/* Requer a inclusão de style.css primeiro. */
+/* ========================================================= */
+
+/* Seção de Introdução do Guia */
+.intro-guia {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--secundario-claro);
+    border-bottom: 3px solid var(--principal-medio);
+}
+
+.intro-guia h1 {
+    font-size: 3rem;
+    color: var(--principal-escuro);
+    margin-bottom: 15px;
+}
+
+.intro-guia p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #444;
+}
+
+
+
+.timeline-passos {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Linha Central da Timeline (na cor de destaque) */
+.timeline-passos::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--principal-medio);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.passo-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+/* Posicionamento dos passos (alternado) */
+.passo-item:nth-child(odd) {
+    left: 0; /* Lado Esquerdo */
+}
+
+.passo-item:nth-child(even) {
+    left: 50%; /* Lado Direito */
+}
+
+.passo-conteudo {
+    padding: 20px 30px;
+    background-color: var(--corpo-fundo);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--principal-escuro);
+}
+
+/* Bolinha de Ícone na Timeline */
+.passo-icone {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    background-color: var(--principal-medio);
+    border: 4px solid var(--corpo-fundo); /* Borda branca para destacar na linha */
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--principal-escuro);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Ajustes para o lado esquerdo */
+.passo-item:nth-child(odd) .passo-icone {
+    left: auto;
+    right: -25px;
+}
+
+/* Ajustes para o lado direito */
+.passo-item:nth-child(even) .passo-icone {
+    left: -25px;
+    right: auto;
+}
+
+.passo-item:nth-child(even) .passo-conteudo {
+    /* Mover para que a seta fique na esquerda */
+    margin-left: 40px; 
+    border-top: 5px solid var(--sucesso); /* Cor de sucesso para alternar */
+}
+
+.passo-item h3 {
+    font-size: 1.8rem;
+    color: var(--principal-escuro);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.passo-item p {
+    color: #555;
+}
+
+/* ===== Seção de Chamada de Inscrição (CTA) ===== */
+.cta-inscreva {
+    padding: 70px 0;
+    background-color: var(--principal-escuro);
+    color: white;
+    text-align: center;
+}
+
+.cta-inscreva h2 {
+    color: var(--principal-medio);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-inscreva p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--secundario-claro);
+}

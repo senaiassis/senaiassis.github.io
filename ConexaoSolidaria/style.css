@@ -1,0 +1,302 @@
+/* ========================================================= */
+/* style.css - Conexão Solidária (ESTÉTICA MODERNA E VIBRANTE) */
+/* ========================================================= */
+
+/* |---------------------------------------------|
+|       PALETA DE CORES (Estética 2.0)        |
+|---------------------------------------------|
+| Foco: Criatividade, Energia e Otimismo.     |
+*/
+:root {
+    /* --principal-escuro: Roxo Profundo/Vinho (Header, Footer, Títulos) */
+    --principal-escuro: #4C1E4F; 
+    /* --principal-medio: Amarelo Ouro/Mostarda Vibrante (Ação Primária, Destaque) */
+    --principal-medio: #FFC300; 
+    /* --secundario-claro: Lavanda muito clara (Fundo de Seções/Cartões) */
+    --secundario-claro: #F8F8FF; 
+    /* --sucesso: Verde Água (Ícones de Sucesso/Contraste) */
+    --sucesso: #2A9D8F; 
+    /* --alerta: Vermelho (Para chamadas urgentes) */
+    --alerta: #E76F51; 
+    
+    /* Fundo da página */
+    --corpo-fundo: #FFFFFF; 
+    /* Cor do texto principal */
+    --texto-base: #222222; 
+}
+
+/* ===== Reset Básico e Tipografia ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fonte moderna e limpa. Sugiro 'Poppins' ou 'Montserrat' se puder importar. */
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background-color: var(--corpo-fundo);
+    color: var(--texto-base);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+a {
+    color: var(--principal-escuro);
+    text-decoration: none;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+a:hover {
+    color: var(--principal-medio); /* Hover para a cor vibrante */
+    opacity: 1;
+}
+
+/* Container principal de largura */
+.container {
+    max-width: 1280px; /* Um pouco mais largo */
+    margin: 0 auto;
+    padding: 0 30px; 
+}
+
+/* ===== Header e Menu de Navegação ===== */
+header {
+    background-color: var(--principal-escuro);
+    color: white;
+    padding: 25px 0; /* Mais espaçamento vertical */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--principal-medio); /* Logo na cor vibrante */
+    letter-spacing: 1px;
+}
+
+.menu-links a {
+    color: white;
+    margin-left: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 5px; 
+}
+
+/* Efeito de Sublinhado com a cor vibrante */
+.menu-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--principal-medio);
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-links a:hover::after {
+    width: 100%;
+}
+
+/* ===== Seções e Títulos ===== */
+main {
+    padding: 80px 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-secao h2 {
+    font-size: 2.8rem;
+    color: var(--principal-escuro);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha de destaque grossa (cor vibrante) */
+.titulo-secao h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--principal-medio);
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* ===== Hero Section (Destaque Principal) ===== */
+.hero {
+    padding: 120px 0;
+    background-color: var(--secundario-claro);
+    border-bottom: 5px solid var(--principal-medio);
+}
+
+.hero h1 {
+    font-size: 4rem !important;
+    font-weight: 800;
+    color: var(--principal-escuro);
+}
+
+/* ===== Botões de Ação (CTA) ===== */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--principal-medio);
+    color: var(--principal-escuro) !important; /* Texto escuro no botão vibrante */
+    padding: 16px 35px;
+    border-radius: 50px; /* Totalmente arredondado (pílula) */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(255, 195, 0, 0.4); 
+    border: none;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    background-color: #FFD64D; /* Tom mais claro no hover */
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 20px rgba(255, 195, 0, 0.6);
+}
+
+/* Botão de Cadastro de Projeto (Cor de Contraste/Alerta) */
+.btn-secundario {
+    background-color: var(--alerta);
+    color: white !important;
+    box-shadow: 0 6px 15px rgba(231, 111, 81, 0.4);
+}
+
+.btn-secundario:hover {
+    background-color: #D65A42;
+    box-shadow: 0 8px 20px rgba(231, 111, 81, 0.6);
+}
+
+
+/* ===== Estatísticas e Cards (Grid) ===== */
+.grid-estatisticas {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px; 
+    text-align: center;
+}
+
+.card-estatistica {
+    flex-basis: 30%;
+    background-color: var(--secundario-claro);
+    padding: 50px 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(76, 30, 79, 0.1); /* Borda sutil */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-estatistica:hover {
+    transform: translateY(-7px); 
+    box-shadow: 0 12px 35px rgba(76, 30, 79, 0.2);
+}
+
+.card-estatistica i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: var(--principal-escuro); /* Cor base nos ícones */
+}
+
+.card-estatistica:nth-child(2) i {
+    color: var(--sucesso); /* Verde Água no segundo card */
+}
+
+.card-estatistica div {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--principal-medio); /* O número na cor vibrante */
+    margin-bottom: 10px;
+}
+
+.card-estatistica p {
+    color: var(--texto-base);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* ===== Como Funciona (Passos) ===== */
+.como-funciona {
+    background-color: var(--corpo-fundo);
+    padding: 80px 0;
+}
+
+.passos-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    text-align: center;
+}
+
+.passo {
+    flex-basis: 30%;
+    padding: 20px;
+}
+
+.passo-numero {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--principal-medio);
+    margin-bottom: 20px;
+    /* Adiciona um anel duplo para um visual moderno */
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: 5px solid var(--principal-medio);
+    border-radius: 50%;
+    background-color: var(--principal-escuro);
+    color: white;
+}
+
+.passo h3 {
+    color: var(--principal-escuro);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* ===== Footer (Rodapé) ===== */
+footer {
+    background-color: var(--principal-escuro);
+    color: var(--secundario-claro); 
+    padding: 35px 0;
+    font-size: 0.9rem;
+    border-top: 8px solid var(--principal-medio); /* Linha grossa e vibrante no topo */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content a {
+    color: var(--secundario-claro);
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.footer-content a:hover {
+    color: var(--principal-medio);
+}

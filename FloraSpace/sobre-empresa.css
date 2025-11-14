@@ -1,0 +1,204 @@
+:root {
+    --rosa-escuro: #c00163;
+    --rosa: #d0227a;
+    --rosa-medio: #e04392;
+    --rosa-medio1: #ef63a9;
+    --rosa-claro: #ff84c0;
+    --marrom: #8d7966;
+    --cinza: #a0a0a0;
+    --fundo-claro: #fff0f5;
+    --branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-claro);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--rosa-escuro), var(--rosa-medio));
+    color: var(--branco);
+    padding: 20px 10px;
+    /* position: sticky; */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+   
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Menu de navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.1);
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: var(--rosa-claro);
+    color: var(--branco);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Seções */
+section {
+    margin-bottom: 60px;
+    background-color: var(--branco);
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+section h2 {
+    font-family: 'Georgia', serif;
+    color: var(--rosa-escuro);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* Listas */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--rosa-medio);
+    box-shadow: 0 0 8px rgba(224,67,146,0.3);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--rosa-medio);
+    color: var(--branco);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--rosa-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Parágrafo com dica */
+p strong {
+    background-color: var(--rosa-medio1);
+    color: var(--branco);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Botão Voltar ao Topo */
+.btn-topo {
+    /* Posição fixa no canto inferior direito */
+    position: fixed;
+    bottom: 30px; /* Distância da parte inferior */
+    right: 30px; /* Distância da direita */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+
+    /* Estilo e Cor */
+    background-color: var(--rosa-medio); /* Cor solicitada */
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 50px; /* Centraliza o ícone verticalmente */
+    text-align: center;
+
+    /* Formato circular */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    /* Sombra e transição */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-topo:hover,
+.btn-topo:focus {
+    /* Efeito ao passar o mouse */
+    background-color: var(--rosa-escuro); 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}

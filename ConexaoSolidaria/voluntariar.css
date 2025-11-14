@@ -1,0 +1,107 @@
+/* ========================================================= */
+/* voluntariar.css - Estilos Específicos para Inscrição de Voluntários */
+/* Requer a inclusão de style.css primeiro. */
+/* ========================================================= */
+
+/* Introdução ao Formulário */
+.intro-formulario {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--secundario-claro);
+    border-bottom: 3px solid var(--principal-medio);
+}
+
+.intro-formulario h1 {
+    color: var(--principal-escuro);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.intro-formulario p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #444;
+}
+
+/* Container do Formulário Principal */
+.form-voluntario-container {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Títulos de Seção dentro do Formulário */
+.secao-titulo {
+    color: var(--principal-medio); /* Amarelo Mostarda */
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--principal-escuro);
+    padding-bottom: 5px;
+}
+
+/* Layout de Duas Colunas dentro do Formulário */
+.form-duas-colunas {
+    display: flex;
+    gap: 25px;
+}
+
+.coluna-50 {
+    flex: 1; /* Divide o espaço igualmente */
+}
+
+/* Checkboxes e Radios */
+.form-check-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: var(--corpo-fundo);
+}
+
+.form-check-group label {
+    font-weight: 500;
+    color: var(--texto-base);
+}
+
+/* Destaque para inputs requeridos */
+.form-group label::after {
+    content: ' *';
+    color: var(--alerta); /* Usa a cor de alerta para indicar obrigatório */
+}
+
+/* Estilo para a área de Termos */
+.termos-e-consentimento {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f1f9;
+    border-radius: 8px;
+    border: 1px dashed var(--principal-escuro);
+}
+
+.termos-e-consentimento label {
+    font-weight: 600;
+    color: var(--principal-escuro);
+    cursor: pointer;
+}
+
+/* Reutilizando estilos de input do contato.css */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    /* Manter estilos de borda e foco de 'contato.css' ou 'style.css' */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.btn-inscrever-agora {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    width: 100%;
+}

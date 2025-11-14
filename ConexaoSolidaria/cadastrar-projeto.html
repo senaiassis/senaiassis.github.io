@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Projeto Social | Conexão Solidária</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container menu-flex">
+            <div class="logo">CS</div> 
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="missoes.html">Missão & Valores</a>
+                <a href="projetos.html" style="color: var(--principal-medio);">Projetos</a>
+                <a href="guia-voluntario.html">Seja Voluntário</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="intro-cadastro">
+            <div class="container">
+                <h1>Cadastre Seu Projeto e Encontre Voluntários</h1>
+                <p>
+                    A Conexão Solidária é o seu parceiro para alavancar o impacto social. Preencha este formulário detalhado para que possamos conectar sua causa com as pessoas certas.
+                </p>
+            </div>
+        </section>
+
+        <section class="form-projeto-container" style="padding-bottom: 20px;">
+            <div class="container">
+                
+                <h2 class="secao-titulo"><i class="fas fa-clipboard-list"></i> Pré-requisitos para Inscrição</h2>
+                <ul class="requisitos-lista">
+                    <li><i class="fas fa-check-circle"></i> O Projeto deve ser sem fins lucrativos.</li>
+                    <li><i class="fas fa-check-circle"></i> Ter no mínimo 6 meses de atuação comprovada.</li>
+                    <li><i class="fas fa-check-circle"></i> Possuir CNPJ ativo (ONG, Associação, Instituto).</li>
+                    <li><i class="fas fa-check-circle"></i> Estar localizado na nossa área de cobertura (Ver Termos de Uso).</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="form-projeto-container" style="padding-top: 0;">
+            <div class="container">
+                
+                <form action="confirmacao-projeto.html" method="POST" enctype="multipart/form-data">
+                    
+                    <h2 class="secao-titulo"><i class="fas fa-pencil-alt"></i> 1. Informações Essenciais do Projeto</h2>
+                    
+                    <div class="form-group">
+                        <label for="nome_projeto">Nome Oficial do Projeto/Organização</label>
+                        <input type="text" id="nome_projeto" name="nome_projeto" required placeholder="Ex: Instituto Reforço Digital">
+                    </div>
+                    
+                    <div class="form-duas-colunas">
+                        <div class="form-group coluna-50">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" id="cnpj" name="cnpj" required placeholder="XX.XXX.XXX/XXXX-XX">
+                        </div>
+                        <div class="form-group coluna-50">
+                            <label for="causa">Principal Causa de Atuação</label>
+                            <select id="causa" name="causa" required>
+                                <option value="" disabled selected>Selecione a área principal</option>
+                                <option value="educacao">Educação</option>
+                                <option value="saude">Saúde & Bem-Estar</option>
+                                <option value="ambiente">Meio Ambiente</option>
+                                <option value="cultura">Arte & Cultura</option>
+                                <option value="inclusao">Inclusão Social</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site">Website (ou Link da Página Social)</label>
+                        <input type="url" id="site" name="site" placeholder="https://www.seuprojeto.org.br">
+                    </div>
+                    
+                    <h2 class="secao-titulo"><i class="fas fa-bullhorn"></i> 2. Detalhes e Necessidade de Voluntariado</h2>
+
+                    <div class="form-group">
+                        <label for="resumo">Resumo do Projeto (Máx. 200 caracteres)</label>
+                        <textarea id="resumo" name="resumo" required maxlength="200" placeholder="Uma frase curta e impactante sobre o que vocês fazem."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição Completa (Missão, Visão, Público)</label>
+                        <textarea id="descricao" name="descricao" required minlength="100" placeholder="Descreva o histórico, o público-alvo e o impacto social de sua iniciativa."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="necessidades">Tipos de Voluntariado que Você Mais Precisa</label>
+                        <select id="necessidades" name="necessidades" multiple required>
+                            <option value="presencial">Voluntário Presencial (aulas, mutirões)</option>
+                            <option value="remoto">Voluntário Remoto (design, gestão)</option>
+                            <option value="financeiro">Captação de Recursos</option>
+                            <option value="profissional">Apoio Jurídico ou Contábil</option>
+                            <option value="midia">Marketing Digital e Mídias Sociais</option>
+                        </select>
+                        <small>Segure CTRL (ou CMD) para selecionar múltiplas opções.</small>
+                    </div>
+
+                    <h2 class="secao-titulo"><i class="fas fa-id-card"></i> 3. Contato do Representante</h2>
+
+                    <div class="form-duas-colunas">
+                        <div class="form-group coluna-50">
+                            <label for="nome_contato">Nome do Representante Legal/Líder</label>
+                            <input type="text" id="nome_contato" name="nome_contato" required>
+                        </div>
+                        <div class="form-group coluna-50">
+                            <label for="email_contato">Email de Contato Principal</label>
+                            <input type="email" id="email_contato" name="email_contato" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="anexo_logo">Anexar Logotipo do Projeto (Preferencialmente PNG com fundo transparente)</label>
+                        <input type="file" id="anexo_logo" name="anexo_logo" accept=".png,.jpg,.jpeg">
+                    </div>
+                    
+                    <h2 class="secao-titulo"><i class="fas fa-check-double"></i> 4. Finalização</h2>
+                    
+                    <div class="form-group termos-e-consentimento">
+                        <input type="checkbox" id="termos" name="termos" required> 
+                        <label for="termos">Eu confirmo que li e aceito a <a href="#" target="_blank">Política de Parceria</a> e a <a href="#" target="_blank">Política de Dados</a> da Conexão Solidária.</label>
+                    </div>
+
+                    <button type="submit" class="btn-principal btn-cadastrar-projeto">
+                        <i class="fas fa-upload"></i> CADASTRAR PROJETO
+                    </button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Conexão Solidária. Todos os direitos reservados.</p>
+            <div>
+                <a href="missoes.html">Sobre Nós</a> | 
+                <a href="contato.html">Fale Conosco</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

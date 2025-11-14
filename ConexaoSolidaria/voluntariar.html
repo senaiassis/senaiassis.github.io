@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição de Voluntário | Conexão Solidária</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="voluntariar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container menu-flex">
+            <div class="logo">CS</div> 
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="missoesevalores.html">Missão & Valores</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="voluntarios.html" style="color: var(--principal-medio);">Seja Voluntário</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="intro-formulario">
+            <div class="container">
+                <h1>Formulário de Inscrição para Voluntários</h1>
+                <p>
+                    Parabéns por dar o primeiro passo! Leva apenas 5 minutos para preencher seus dados e nos ajudar a encontrar o match perfeito entre suas habilidades e uma causa.
+                </p>
+            </div>
+        </section>
+
+        <section class="form-voluntario-container">
+            <div class="container">
+                
+                <form action="confirmacao-voluntario.html" method="POST">
+                    
+                    <h2 class="secao-titulo"><i class="fas fa-user-circle"></i> 1. Dados Pessoais</h2>
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome e sobrenome">
+                    </div>
+                    
+                    <div class="form-duas-colunas">
+                        <div class="form-group coluna-50">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="Seu melhor e-mail">
+                        </div>
+                        <div class="form-group coluna-50">
+                            <label for="telefone">Telefone (WhatsApp)</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-duas-colunas">
+                        <div class="form-group coluna-50">
+                            <label for="data_nascimento">Data de Nascimento</label>
+                            <input type="date" id="data_nascimento" name="data_nascimento" required>
+                        </div>
+                        <div class="form-group coluna-50">
+                            <label for="cidade">Sua Cidade / Bairro</label>
+                            <input type="text" id="cidade" name="cidade" required placeholder="Ex: São Paulo / Pinheiros">
+                        </div>
+                    </div>
+
+                    <h2 class="secao-titulo"><i class="fas fa-lightbulb"></i> 2. Interesses e Habilidades</h2>
+                    
+                    <div class="form-group">
+                        <label>Áreas de Interesse (Selecione até 3)</label>
+                        <div class="form-duas-colunas">
+                            <div class="coluna-50">
+                                <div class="form-check-group"><input type="checkbox" id="educacao" name="interesse[]" value="educacao"> <label for="educacao">Educação / Ensino</label></div>
+                                <div class="form-check-group"><input type="checkbox" id="saude" name="interesse[]" value="saude"> <label for="saude">Saúde & Bem-Estar</label></div>
+                                <div class="form-check-group"><input type="checkbox" id="ambiente" name="interesse[]" value="ambiente"> <label for="ambiente">Meio Ambiente</label></div>
+                            </div>
+                            <div class="coluna-50">
+                                <div class="form-check-group"><input type="checkbox" id="cultura" name="interesse[]" value="cultura"> <label for="cultura">Arte & Cultura</label></div>
+                                <div class="form-check-group"><input type="checkbox" id="tecnologia" name="interesse[]" value="tecnologia"> <label for="tecnologia">Tecnologia & T.I.</label></div>
+                                <div class="form-check-group"><input type="checkbox" id="admin" name="interesse[]" value="admin"> <label for="admin">Administrativo / Gestão</label></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habilidades">Quais habilidades você gostaria de oferecer?</label>
+                        <textarea id="habilidades" name="habilidades" placeholder="Ex: Sou bom em redes sociais, dou aulas de reforço em matemática, sei fazer planilhas..."></textarea>
+                    </div>
+
+                    <h2 class="secao-titulo"><i class="fas fa-clock"></i> 3. Disponibilidade</h2>
+
+                    <div class="form-group">
+                        <label for="frequencia">Qual a sua frequência ideal de voluntariado?</label>
+                        <select id="frequencia" name="frequencia" required>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="semanal">Semanal (1-2 horas)</option>
+                            <option value="quinzenal">Quinzenal</option>
+                            <option value="mensal">Mensal (eventos pontuais)</option>
+                            <option value="ocasional">Apenas em eventos grandes/ocasionais</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Prefere Atividades</label>
+                        <div style="display: flex; gap: 20px;">
+                            <div class="form-check-group"><input type="radio" id="presencial" name="modalidade" value="presencial" required> <label for="presencial">Presenciais</label></div>
+                            <div class="form-check-group"><input type="radio" id="online" name="modalidade" value="online"> <label for="online">Online / Remotas</label></div>
+                            <div class="form-check-group"><input type="radio" id="ambos" name="modalidade" value="ambos"> <label for="ambos">Ambas</label></div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="secao-titulo"><i class="fas fa-lock"></i> 4. Confirmação</h2>
+                    
+                    <div class="form-group termos-e-consentimento">
+                        <input type="checkbox" id="termos" name="termos" required> 
+                        <label for="termos">Eu li e concordo com os <a href="#" target="_blank">Termos de Uso</a> e a <a href="#" target="_blank">Política de Privacidade</a> da Conexão Solidária.</label>
+                    </div>
+
+                    <button type="submit" class="btn-principal btn-inscrever-agora">
+                        <i class="fas fa-hand-holding-heart"></i> ENVIAR MINHA INSCRIÇÃO
+                    </button>
+                
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Conexão Solidária. Todos os direitos reservados.</p>
+            <div>
+                <a href="missoes.html">Sobre Nós</a> | 
+                <a href="contato.html">Fale Conosco</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

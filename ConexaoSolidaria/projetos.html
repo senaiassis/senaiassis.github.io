@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Locais | Conexão Solidária</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projetos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container menu-flex">
+            <div class="logo">CS</div> 
+            <nav class="menu-links">
+                <a href="index.html">Início</a>
+                <a href="missoesevalores.html">Missão & Valores</a>
+                <a href="projetos.html" style="color: var(--principal-medio);">Projetos</a>
+                 <a href="voluntarios.html">Seja Voluntário</a>
+                <a href="contato.html">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="filtros-container">
+            <div class="container">
+                <ul class="filtros-lista">
+                    <li class="filtro-item ativo"><i class="fas fa-list-alt"></i>Todos os Projetos</li>
+                    <li class="filtro-item"><i class="fas fa-graduation-cap"></i>Educação</li>
+                    <li class="filtro-item"><i class="fas fa-heartbeat"></i>Saúde & Bem-Estar</li>
+                    <li class="filtro-item"><i class="fas fa-leaf"></i>Meio Ambiente</li>
+                    <li class="filtro-item"><i class="fas fa-palette"></i>Arte & Cultura</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projetos-grid-container">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>Encontre a Causa Certa Para Você</h2>
+                    <p>Veja os projetos mais urgentes e as oportunidades de voluntariado disponíveis na sua região.</p>
+                </div>
+
+                <div class="projetos-grid">
+                    
+                    <div class="card-projeto">
+                        <div class="card-imagem" style="background-image: url('placeholder.jpg');">Projeto Reforço Digital</div>
+                        <div class="card-info">
+                            <h3>Reforço Digital na Periferia</h3>
+                            <p>Ajude jovens de 10 a 16 anos com aulas de informática básica e programação para prepará-los para o futuro.</p>
+                            <div class="card-detalhes">
+                                <span class="tag-causa">Educação</span>
+                                <a href="projeto-detalhe-1.html" class="btn-saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-projeto">
+                        <div class="card-imagem" style="background-image: url('placeholder.jpg');">Apoio a Idosos</div>
+                        <div class="card-info">
+                            <h3>Aconchego para a Terceira Idade</h3>
+                            <p>Visitas a lares de idosos, organização de eventos recreativos e auxílio em mobilidade. Requer paciência e carinho.</p>
+                            <div class="card-detalhes">
+                                <span class="tag-causa">Saúde & Bem-Estar</span>
+                                <a href="projeto-detalhe-2.html" class="btn-saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto">
+                        <div class="card-imagem" style="background-image: url('placeholder.jpg');">Guardiões do Parque</div>
+                        <div class="card-info">
+                            <h3>Guardiões do Parque Central</h3>
+                            <p>Participe de mutirões de limpeza, plantio de mudas nativas e educação ambiental em áreas de preservação da cidade.</p>
+                            <div class="card-detalhes">
+                                <span class="tag-causa">Meio Ambiente</span>
+                                <a href="projeto-detalhe-3.html" class="btn-saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-projeto">
+                        <div class="card-imagem" style="background-image: url('placeholder.jpg');">Circo Comunitário</div>
+                        <div class="card-info">
+                            <h3>Circo e Arte para a Comunidade</h3>
+                            <p>Projeto que leva oficinas de artes circenses, teatro e música para crianças e adolescentes em situação de vulnerabilidade.</p>
+                            <div class="card-detalhes">
+                                <span class="tag-causa">Arte & Cultura</span>
+                                <a href="projeto-detalhe-4.html" class="btn-saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto">
+                        <div class="card-imagem" style="background-image: url('placeholder.jpg');">Costurando Oportunidades</div>
+                        <div class="card-info">
+                            <h3>Costurando Oportunidades</h3>
+                            <p>Ajuda na oficina de costura para capacitar mulheres em situação de risco, oferecendo independência financeira e acolhimento.</p>
+                            <div class="card-detalhes">
+                                <span class="tag-causa">Inclusão Social</span>
+                                <a href="projeto-detalhe-5.html" class="btn-saiba-mais">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projeto" style="text-align: center; display: flex; flex-direction: column; justify-content: center; background-color: var(--principal-escuro); color: white;">
+                        <i class="fas fa-hands-helping" style="font-size: 3rem; margin-bottom: 15px; color: var(--principal-medio);"></i>
+                        <h3 style="color: white;">Seu Projeto Não Está Aqui?</h3>
+                        <p style="color: #ccc;">Cadastre sua iniciativa e encontre voluntários qualificados.</p>
+                        <a href="cadastrar-projeto.html" class="btn-principal" style="width: 80%; margin: 15px auto 0;">Cadastrar Agora</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-projeto">
+            <div class="container">
+                <h2>Seu Projeto Precisa de Mãos?</h2>
+                <p>Nós conectamos sua causa aos voluntários mais dedicados da região.</p>
+                <a href="cadastrar-projeto.html" class="btn-principal btn-cta-projeto">Cadastre Seu Projeto Social</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Conexão Solidária. Projetado com Otimismo e Paixão.</p>
+            <div>
+                <a href="missoes.html">Sobre Nós</a> | 
+                <a href="contato.html">Fale Conosco</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
